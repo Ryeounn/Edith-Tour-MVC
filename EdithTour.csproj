@@ -113,11 +113,13 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Css\Home.css" />
     <Content Include="Content\Images\Home\korea.jpg" />
+    <Content Include="Content\Images\Home\Location\China.jpg" />
+    <Content Include="Content\Images\Home\Location\korea.jpg" />
+    <Content Include="Content\Images\Home\Location\VietNam.jpg" />
     <Content Include="Content\Images\Home\thumnailtet.png" />
     <Content Include="Content\Images\Home\vietnamtrending.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Images\Home\Edith.png" />
-    <Content Include="Content\Images\Home\hanquoc.jpg" />
     <Content Include="Content\Images\Home\Slider\japan.png" />
     <Content Include="Content\Images\Home\logo.png" />
     <Content Include="Content\Images\Home\Slider\thailand.png" />
