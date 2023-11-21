@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100%;
 }
 
@@ -15,7 +15,7 @@ body{
 
 .container-fluid,
 .carousel-control-next,
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     padding: 0;
     overflow: hidden;
 }
@@ -57,27 +57,27 @@ body{
     z-index: 100;
 }
 
-#nav > li {
-    display: inline-block;
-}
+    #nav > li {
+        display: inline-block;
+    }
 
-#nav li {
-    position: relative;
-}
+    #nav li {
+        position: relative;
+    }
 
-#nav > li > a {
-    color: #000;
-    text-transform: uppercase;
-}
+    #nav > li > a {
+        color: #000;
+        text-transform: uppercase;
+    }
 
-#nav li:hover .subnav {
-    display: block;
-}
+    #nav li:hover .subnav {
+        display: block;
+    }
 
-#nav .subnav li:hover a {
-    color: #fff;
-    background-color: #5ab503;
-}
+    #nav .subnav li:hover a {
+        color: #fff;
+        background-color: #5ab503;
+    }
 
 .margin-menu {
     margin: 1em 0 0 0;
@@ -91,7 +91,7 @@ body{
     display: block;
 }
 
-#nav li:hover a{
+#nav li:hover a {
     color: #ff6a00;
 }
 
@@ -101,19 +101,19 @@ body{
 .fa-mobile,
 .fa-sign-in,
 .fa-fire,
-.fa-clipboard{
+.fa-clipboard {
     display: block;
     text-align: center;
     font-size: 30px;
     opacity: 0.7;
 }
 
-.login{
+.login {
     margin: .3em .2em 0 0;
     float: right;
 }
 
-#content{
+#content {
     position: relative;
     height: calc(100% - 118px);
     top: 118px;
@@ -125,7 +125,7 @@ body{
     border: 1px solid #000;
 }
 
-.autumn-title{
+.autumn-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 28px;
@@ -141,7 +141,7 @@ body{
     margin: 12px 0 16px 16px;
 }
 
-.img-tour{
+.img-tour {
     width: 350px;
     height: 250px;
     border: 1px solid #000;
@@ -164,10 +164,12 @@ body{
     width: 100%;
     word-spacing: 1px;
     letter-spacing: .5px;
+    padding-right: 1em;
 }
 
-.link-detailtour{
-   text-decoration: none;
+.link-detailtour,
+.link-detailtour:hover {
+    text-decoration: none;
 }
 
 .timeline-tour {
@@ -197,29 +199,52 @@ body{
     color: #fff;
 }
 
-.carousel-img{
+.carousel-img {
     width: 100%;
 }
 
 #footer {
     background-color: #000;
     bottom: 0;
-    margin-top: 10em;
     width: 100%;
-    white-space: nowrap;
     line-height: 60px;
 }
 
-.parallax {
-    background-image: url('../Images/Home/korea.jpg');
+.parallax,
+.parallax-cancel,
+.parallax-rules,
+.parallax-intro {
     height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 1em;
-    opacity: 0.8;
+    opacity: 0.9;
 }
+
+.parallax {
+    background-image: url('../Images/Home/korea.jpg');
+    margin-top: 1em;
+}
+
+.parallax-cancel {
+    background-image: url('../Images/Home/imgcancel.jpg');
+}
+
+.parallax-rules {
+    background-image: url('../Images/Home/rules.jpg');
+}
+
+.parallax-intro {
+    background-image: url('../Images/Home/introduction.jpg');
+}
+
+.parallax-login {
+    background-image: url('../Images/Home/korea.jpg');
+    height: 570px;
+    margin-top: 1em;
+}
+
 
 .hot-tour {
     font-size: 40px;
@@ -230,7 +255,7 @@ body{
     text-align: center;
 }
 
-.content-boxlax{
+.content-boxlax {
     width: 500px;
     height: 100%;
     background-color: transparent;
@@ -238,7 +263,7 @@ body{
     margin-right: 5em;
 }
 
-.headercontent-content{
+.headercontent-content {
     margin-top: 1em;
     padding: 1em 2em 0 2em;
     color: #fff;
@@ -256,18 +281,18 @@ body{
     background-color: #FFB000;
 }
 
-.btn-seemore{
+.btn-seemore {
     margin: 1em 0 2em 4em;
 }
 
-.thumnailtet-content{
+.thumnailtet-content {
     width: 100%;
     box-shadow: 2px 3px #ccc;
     transition: .5s;
 }
 
 .thumnailtet-href:hover img,
-.thumnaildiscount-href:hover img{
+.thumnaildiscount-href:hover img {
     transform: scale(1.05);
     transition: .5s;
 }
@@ -278,6 +303,7 @@ body{
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 4px #ccc;
+    cursor: pointer;
 }
 
 .box-img-trending {
@@ -298,6 +324,7 @@ body{
     height: 0;
     transition: .5s ease;
 }
+
 .text {
     color: white;
     font-size: 20px;
@@ -314,75 +341,75 @@ body{
     height: 10%;
 }
 
-.box-have-trending{
+.box-have-trending {
     color: #999;
     margin-left: .5em;
 }
 
-.box-newpost-trending{
+.box-newpost-trending {
     margin-left: .5em;
     text-decoration: underline;
     color: #777;
 }
 
-.box-newpost-trending:hover{
+.box-newpost-trending:hover {
     color: #999;
 }
 
-.box-content-trending{
+.box-content-trending {
     margin: 1em 0 0 .5em;
     word-spacing: 1px;
     font-weight: 600;
 }
 
-.box-contenthref-trending{
+.box-contenthref-trending {
     color: #000;
 }
 
-.box-contenthref-trending:hover{
-    text-decoration: none;
-    color: #000;
-    opacity: 0.7;
-}
+    .box-contenthref-trending:hover {
+        text-decoration: none;
+        color: #000;
+        opacity: 0.7;
+    }
 
-.form-contact{
+.form-contact {
     width: 100%;
     height: 200px;
     background-color: #ccc;
 }
 
-.title-contact{
+.title-contact {
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
 
-.box-standard{
+.box-standard {
     width: 100%;
     height: 120px;
     border: 1px solid #000;
     border-radius: 10px;
 }
 
-.icon-standard{
+.icon-standard {
     color: #ff891e;
     font-size: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50%;
+    margin-top: 30%;
     margin-left: 50%;
 }
 
-.title-standard{
+.title-standard {
     font-size: 20px;
     text-transform: uppercase;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     letter-spacing: 1px;
     text-shadow: 1px 2px 3px #ccc;
 }
 
-.content-standard{
+.content-standard {
     font-size: 14px;
     margin-top: -1em;
 }
@@ -435,11 +462,192 @@ body{
     transform: rotateY(180deg);
 }
 
-.img-location{
+.img-location {
     width: 100%;
     height: 100%;
 }
 
-.name-location{
+.name-location {
     margin-top: 35%;
+}
+
+.footer-title,
+.footer-title-about,
+.footer-title-media {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.footer-title-sm-phone,
+.footer-title-sm-email,
+.footer-title-sm-add,
+.footer-title-about-sm-ab {
+    margin-top: -2.5em;
+}
+
+.footer-copy {
+    text-align: center;
+}
+
+.mbot {
+    margin-bottom: 7.2em;
+}
+
+.footer-numberphone:hover,
+.footer-email:hover,
+.footer-ab:hover {
+    text-decoration: none;
+}
+
+/*Policy and Rules*/
+
+.titlecontent{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 28%;
+    font-weight: bold;
+}
+
+.under-border {
+    width: 60px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 12px auto 0;
+}
+
+/*Login*/
+.form {
+    display: inline-block;
+    margin-top: 130px;
+    flex-direction: column;
+    height: 330px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 10%;
+}
+
+.title {
+    font-size: 28px;
+    color: #ff6a00;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title::before, .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: red;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+    background-color: #ff6a00;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+.signin a {
+    color: royalblue;
+}
+
+.signin a:hover {
+    text-decoration: underline royalblue;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    width: 300px;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span, .form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.form label .input:valid + span {
+    color: green;
+}
+
+.submit {
+    width: 100px;
+    border: none;
+    outline: none;
+    background-color: deepskyblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+}
+
+.submit:hover {
+    background-color: #ff6a00;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }

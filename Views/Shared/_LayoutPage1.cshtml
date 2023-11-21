@@ -16,7 +16,7 @@
 <body>
     <div id="header">
         <div class="header-menu">
-            <img src="~/Images/Home/logo.png" class="header-logo">
+            <a href="@Url.Action("Index","Home")"><img src="~/Content/Images/Home/logo.png" class="header-logo"></a>
             <ul id="nav">
                 <li><a class="margin-menu sub-menu" href=""><i class="fa fa-fire" aria-hidden="true"></i> Hot Tour</a></li>
                 <li><a class="margin-menu sub-menu" href=""><i class="fab fa-stripe-s"></i> VietNam Tour</a></li>
@@ -27,16 +27,65 @@
             </ul>
             <div class="login">
                 <a class="btn" href="">Sign in</a>
-                <a class="btn btn-outline-primary" href="">Sign up</a>
+                <a class="btn btn-outline-primary" href="@Url.Action("Login", "Account")">Sign up</a>
             </div>
         </div>
     </div>
-    <div id="content">
+    <div id="content" class="mbot">
         @RenderBody()
     </div>
     <footer id="footer" class="border-top footer text-muted">
         <div class="container">
-            ádasdasd
+            <div class="row">
+                <div class="col-lg-4">
+                    <p class="footer-title">Edith Tourism</p>
+                    <p class="footer-title-sm-phone">
+                        Phone: <a href="" class="footer-numberphone">+1234 4567 890</a>
+                    </p>
+                    <p class="footer-title-sm-email">
+                        Email: <a href=""
+                                  class="footer-email">edithtour@gmail.com</a>
+                    </p>
+                    <p class="footer-title-sm-add">Address: 1 Ly Tu Trong, Can Tho City, VietNam</p>
+                </div>
+                <div class="col-lg-4">
+                    <p class="footer-title-about">Service</p>
+                    <p class="footer-title-about-sm-ab"><a href="contact.php" class="footer-ab">Tour Inbound</a></p>
+                    <p class="footer-title-about-sm-ab">
+                        <a href="policy.php" class="footer-ab">
+                            Tour Outbound
+                        </a>
+                    </p>
+                    <p class="footer-title-about-sm-ab">
+                        <a href="policy.php" class="footer-ab">
+                            Restaurant
+                        </a>
+                    </p>
+                    <p class="footer-title-about-sm-ab">
+                        <a href="policy.php" class="footer-ab">
+                            Airline Ticket
+                        </a>
+                    </p>
+                    <p class="footer-title-about-sm-ab">
+                        <a href="policy.php" class="footer-ab">
+                            Hotel
+                        </a>
+                    </p>
+                </div>
+                <div class="col-lg-4 footer-ver">
+                    <p class="footer-title-media">Contact</p>
+                    <p class="footer-title-about-sm-ab"><a href="@Url.Action("Introduction","Home")" class="footer-ab">Introduction</a></p>
+                    <p class="footer-title-about-sm-ab"><a href="contact.php" class="footer-ab">Contact</a></p>
+                    <p class="footer-title-about-sm-ab"><a href="@Url.Action("Rules","Home")" class="footer-ab">Rules</a></p>
+                    <p class="footer-title-about-sm-ab"><a href="@Url.Action("Policy","Home")" class="footer-ab">Privacy Policy</a></p>
+                    <p class="footer-title-about-sm-ab"><a href="@Url.Action("Cancel","Home")" class="footer-ab">Cancellation policy</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="footer-copy">&copy; 2023 Edith Tour Can Tho City, VietNam.</p>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

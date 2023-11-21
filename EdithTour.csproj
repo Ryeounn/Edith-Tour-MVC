@@ -112,10 +112,15 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Css\Home.css" />
+    <Content Include="Content\Images\Home\imgcancel.jpg" />
     <Content Include="Content\Images\Home\korea.jpg" />
     <Content Include="Content\Images\Home\Location\China.jpg" />
     <Content Include="Content\Images\Home\Location\korea.jpg" />
     <Content Include="Content\Images\Home\Location\VietNam.jpg" />
+    <Content Include="Content\Images\Home\rules.jpg" />
+    <Content Include="Content\Images\Home\Slider\france.png" />
+    <Content Include="Content\Images\Home\Slider\hanoi.png" />
+    <Content Include="Content\Images\Home\Slider\italy.png" />
     <Content Include="Content\Images\Home\thumnailtet.png" />
     <Content Include="Content\Images\Home\vietnamtrending.jpg" />
     <Content Include="Global.asax" />
@@ -138,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,6 +179,11 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Views\Home\Policy.cshtml" />
+    <Content Include="Views\Home\Cancel.cshtml" />
+    <Content Include="Views\Home\Rules.cshtml" />
+    <Content Include="Views\Home\Introduction.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

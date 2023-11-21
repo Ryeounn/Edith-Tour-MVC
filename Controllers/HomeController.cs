@@ -13,5 +13,25 @@ namespace EdithTour.Controllers
         {
             return View();
         }
+
+        public ActionResult Policy()
+        {
+            return View();
+        }
+
+        public ActionResult Cancel()
+        {
+            return View();
+        }
+
+        public ActionResult Rules()
+        {
+            return View();
+        }
+
+        public ActionResult Introduction()
+        {
+            return View();
+        }
     }
 }
