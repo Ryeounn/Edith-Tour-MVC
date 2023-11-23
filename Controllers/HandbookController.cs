@@ -78,5 +78,20 @@ namespace EdithTour.Controllers
         {
             return View();
         }
+
+        public ActionResult HandbookNhatrang()
+        {
+            return View();
+        }
+
+        public ActionResult HandbookSaigon()
+        {
+            return View();
+        }
+
+        public ActionResult HandbookCantho()
+        {
+            return View();
+        }
     }
 }

@@ -229,7 +229,10 @@ body {
 .parallax-handbook-australia,
 .parallax-handbook-hanoi,
 .parallax-handbook-quangbinh,
-.parallax-handbook-danang {
+.parallax-handbook-danang,
+.parallax-handbook-nhatrang,
+.parallax-handbook-saigon,
+.parallax-handbook-cantho {
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -319,6 +322,18 @@ body {
 
 .parallax-handbook-danang {
     background-image: url('../../Content/Images/Home/Handbook/Danang/handbookdanang.jpg');
+}
+
+.parallax-handbook-nhatrang {
+    background-image: url('../../Content/Images/Home/Handbook/Nhatrang/handbooknhatrang.jpg');
+}
+
+.parallax-handbook-saigon {
+    background-image: url('../../Content/Images/Home/Handbook/Saigon/handbooksaigon.jpg');
+}
+
+.parallax-handbook-cantho {
+    background-image: url('../../Content/Images/Home/Handbook/Cantho/handbookcantho.jpg');
 }
 
 

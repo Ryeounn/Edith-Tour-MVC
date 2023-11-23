@@ -123,6 +123,7 @@
     <Content Include="Content\Images\Home\Handbook\Australia\australia-8.jpg" />
     <Content Include="Content\Images\Home\Handbook\Australia\australia-9.jpg" />
     <Content Include="Content\Images\Home\Handbook\Australia\handbookaustralia.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Cantho\handbookcantho.jpg" />
     <Content Include="Content\Images\Home\Handbook\China\china-1.jpg" />
     <Content Include="Content\Images\Home\Handbook\China\china-2.jpg" />
     <Content Include="Content\Images\Home\Handbook\China\china-3.jpg" />
@@ -186,8 +187,13 @@
     <Content Include="Content\Images\Home\Handbook\Malaysia\malaysia-2.jpg" />
     <Content Include="Content\Images\Home\Handbook\Malaysia\malaysia-3.jpg" />
     <Content Include="Content\Images\Home\Handbook\Malaysia\malaysia-4.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Nhatrang\handbooknhatrang.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Nhatrang\nhatrang-1.jpg" />
     <Content Include="Content\Images\Home\Handbook\Quangbinh\handbookquangbinh.jpg" />
     <Content Include="Content\Images\Home\Handbook\Quangbinh\quangbinh-1.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Saigon\handbooksaigon.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Saigon\saigon-1.jpg" />
+    <Content Include="Content\Images\Home\Handbook\Saigon\saigon-2.jpg" />
     <Content Include="Content\Images\Home\Handbook\Singapore\handbooksingapore.jpg" />
     <Content Include="Content\Images\Home\Handbook\Singapore\singapore-1.jpg" />
     <Content Include="Content\Images\Home\Handbook\Singapore\singapore-2.jpg" />
@@ -295,6 +301,9 @@
     <Content Include="Views\Handbook\HandbookHanoi.cshtml" />
     <Content Include="Views\Handbook\HandbookQuangbinh.cshtml" />
     <Content Include="Views\Handbook\HandbookDanang.cshtml" />
+    <Content Include="Views\Handbook\HandbookNhatrang.cshtml" />
+    <Content Include="Views\Handbook\HandbookSaigon.cshtml" />
+    <Content Include="Views\Handbook\HandbookCantho.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
