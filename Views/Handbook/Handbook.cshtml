@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Handbook";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="parallax-handbook">
+                <p class="titlecontent">where do you want to go?</p>
+                <div class="under-border"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <p class="title-destination text-uppercase">destination</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <a href="" class="locatored active">VietNam</a>
+        </div>
+        <div class="col-md-12 mt-3">
+            <p>North</p>
+            <a href="@Url.Action("HandbookHanoi","Handbook")" class="locatored">Ha Noi</a>
+        </div>
+        <div class="col-md-12 mt-3">
+            <p>Central</p>
+            <a href="@Url.Action("HandbookQuangbinh","Handbook")" class="locatored">Quang Binh</a>
+            <a href="@Url.Action("HandbookDanang","Handbook")" class="locatored">Da Nang</a>
+            <a href="" class="locatored">Nha Trang</a>
+        </div>
+        <div class="col-md-12 mt-3 mb-4">
+            <p>Sound</p>
+            <a href="" class="locatored">Sai Gon</a>
+            <a href="" class="locatored">Can Tho</a>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <a href="" class="locatored active">International</a>
+        </div>
+        <div class="col-md-12 mt-3">
+            <p>Asia</p>
+            <a href="@Url.Action("HandbookKorea","Handbook")" class="locatored">Korea</a>
+            <a href="@Url.Action("HandbookJapan","Handbook")" class="locatored">Japan</a>
+            <a href="@Url.Action("HandbookChina","Handbook")" class="locatored">China</a>
+            <a href="@Url.Action("HandbookThailand","Handbook")" class="locatored">Thailand</a>
+            <a href="@Url.Action("HandbookSingapore","Handbook")" class="locatored">Singapore</a>
+            <a href="@Url.Action("HandbookIndonesia","Handbook")" class="locatored">Indonesia</a>
+            <a href="@Url.Action("HandbookMalaysia","Handbook")" class="locatored">Malaysia</a>
+        </div>
+        <div class="col-md-12 mt-3">
+            <p>Europe</p>
+            <a href="@Url.Action("HandbookFrance","Handbook")" class="locatored">France</a>
+            <a href="@Url.Action("HandbookItaly","Handbook")" class="locatored">Italy</a>
+        </div>
+        <div class="col-md-12 mt-3 mb-4">
+            <p>Australia</p>
+            <a href="@Url.Action("HandbookAustralia","Handbook")" class="locatored">Australia</a>
+        </div>
+    </div>
+</div>
+

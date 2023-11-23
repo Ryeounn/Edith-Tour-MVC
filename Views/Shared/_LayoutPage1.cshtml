@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="~/Content/Images/Home/logo.png">
     <title>Edith Tour</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                 <li><a class="margin-menu sub-menu" href=""><i class="fab fa-stripe-s"></i> VietNam Tour</a></li>
                 <li><a class="sub-menu" href=""><i class="fas fa-globe-europe"></i> Aboard Tour</a></li>
                 <li><a class="sub-menu" href=""><i class="fa fa-paper-plane" aria-hidden="true"></i>Service</a></li>
-                <li><a class="margin-menu sub-menu" href=""><i class="fas fa-clipboard"></i> Handbook</a></li>
-                <li><a class="sub-menu" href=""><i class="fa fa-mobile" aria-hidden="true"></i>Contact</a></li>
+                <li><a class="margin-menu sub-menu" href="@Url.Action("Handbook", "Handbook")"><i class="fas fa-clipboard"></i> Handbook</a></li>
+                <li><a class="sub-menu" href="@Url.Action("Contact", "Home")"><i class="fa fa-mobile" aria-hidden="true"></i>Contact</a></li>
             </ul>
             <div class="login">
                 <a class="btn" href="">Sign in</a>
@@ -75,7 +76,7 @@
                 <div class="col-lg-4 footer-ver">
                     <p class="footer-title-media">Contact</p>
                     <p class="footer-title-about-sm-ab"><a href="@Url.Action("Introduction","Home")" class="footer-ab">Introduction</a></p>
-                    <p class="footer-title-about-sm-ab"><a href="contact.php" class="footer-ab">Contact</a></p>
+                    <p class="footer-title-about-sm-ab"><a href="@Url.Action("Contact","Home")" class="footer-ab">Contact</a></p>
                     <p class="footer-title-about-sm-ab"><a href="@Url.Action("Rules","Home")" class="footer-ab">Rules</a></p>
                     <p class="footer-title-about-sm-ab"><a href="@Url.Action("Policy","Home")" class="footer-ab">Privacy Policy</a></p>
                     <p class="footer-title-about-sm-ab"><a href="@Url.Action("Cancel","Home")" class="footer-ab">Cancellation policy</a></p>

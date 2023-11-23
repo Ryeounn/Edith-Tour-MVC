@@ -213,7 +213,23 @@ body {
 .parallax,
 .parallax-cancel,
 .parallax-rules,
-.parallax-intro {
+.parallax-intro,
+.parallax-login,
+.parallax-contact,
+.parallax-handbook,
+.parallax-handbook-korea,
+.parallax-handbook-japan,
+.parallax-handbook-china,
+.parallax-handbook-thailand,
+.parallax-handbook-singapore,
+.parallax-handbook-indonesia,
+.parallax-handbook-malaysia,
+.parallax-handbook-france,
+.parallax-handbook-italy,
+.parallax-handbook-australia,
+.parallax-handbook-hanoi,
+.parallax-handbook-quangbinh,
+.parallax-handbook-danang {
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -243,6 +259,66 @@ body {
     background-image: url('../Images/Home/korea.jpg');
     height: 570px;
     margin-top: 1em;
+}
+
+.parallax-contact {
+    background-image: url('../Images/Home/contact.jpg');
+}
+
+.parallax-handbook {
+    background-image: url('../Images/Home/terraces.jpg');
+}
+
+.parallax-handbook-korea {
+    background-image: url('../../Content/Images/Home/Handbook/Korea/handbookkorea.jpg');
+}
+
+.parallax-handbook-japan {
+    background-image: url('../../Content/Images/Home/Handbook/Japan/handbookjapan.jpg');
+}
+
+.parallax-handbook-china {
+    background-image: url('../../Content/Images/Home/Handbook/China/handbookchina.jpg');
+}
+
+.parallax-handbook-thailand {
+    background-image: url('../../Content/Images/Home/Handbook/Thailand/handbookthailand.jpg');
+}
+
+.parallax-handbook-singapore {
+    background-image: url('../../Content/Images/Home/Handbook/Singapore/handbooksingapore.jpg');
+}
+
+.parallax-handbook-indonesia {
+    background-image: url('../../Content/Images/Home/Handbook/Indonesia/handbookindonesia.jpg');
+}
+
+.parallax-handbook-malaysia {
+    background-image: url('../../Content/Images/Home/Handbook/Malaysia/handbookmalaysia.jpg');
+}
+
+.parallax-handbook-france {
+    background-image: url('../../Content/Images/Home/Handbook/France/handbookfrance.jpg');
+}
+
+.parallax-handbook-italy {
+    background-image: url('../../Content/Images/Home/Handbook/Italy/handbookitaly.jpg');
+}
+
+.parallax-handbook-australia {
+    background-image: url('../../Content/Images/Home/Handbook/Australia/handbookaustralia.jpg');
+}
+
+.parallax-handbook-hanoi {
+    background-image: url('../../Content/Images/Home/Handbook/Hanoi/handbookhanoi.jpg');
+}
+
+.parallax-handbook-quangbinh {
+    background-image: url('../../Content/Images/Home/Handbook/Quangbinh/handbookquangbinh.jpg');
+}
+
+.parallax-handbook-danang {
+    background-image: url('../../Content/Images/Home/Handbook/Danang/handbookdanang.jpg');
 }
 
 
@@ -499,7 +575,7 @@ body {
     text-decoration: none;
 }
 
-/*Policy and Rules*/
+/*Policy and Rules and Intro and Contact*/
 
 .titlecontent{
     color: #fff;
@@ -518,6 +594,51 @@ body {
     margin: 12px auto 0;
 }
 
+.title-intro{
+    font-weight: bold;
+}
+
+.title-contact-sm{
+    padding-right: 8em;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.box-contact{
+    color: #fff;
+    background-color: #ff891e;
+    width: fit-content;
+    padding: .5em 1em;
+}
+
+.fa-location-arrow,
+.fa-phone-alt,
+.fa-envelope {
+    padding-top: .2em;
+    width: 32px;
+    height: 42px;
+    font-size: 32px;
+}
+
+.contact-address{
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #E0E0E0;
+    border: #E0E0E0;
+}
+
+.btn-send{
+    padding: 5px 15px;
+    background-color: #ff891e;
+    outline: none;
+    border: none;
+}
 /*Login*/
 .form {
     display: inline-block;
@@ -650,4 +771,52 @@ body {
         transform: scale(1.8);
         opacity: 0;
     }
+}
+
+/*Handbook*/
+.title-destination{
+    font-weight: bold;
+    width: fit-content;
+    letter-spacing: 2px;
+}
+
+.title-destination::after{
+    content: "";
+    position: absolute;
+    background-color: #00A5D3;
+    height: 2.5px;
+    width: 11%;
+    left: 1.3%;
+    bottom: 10px;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.locatored {
+    width: fit-content;
+    color: #00A5D3;
+    border: 1px solid #00A5D3;
+    padding: .5em 1.5em;
+    border-radius: 5px;
+}
+
+.active, .locatored:hover {
+    text-decoration: none;
+    background-color: #00A5D3;
+    color: #fff;
+}
+
+.handbook-content-1{
+    
+    font-size: 20px;
+}
+
+.handbook-title-1{
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.note-img{
+    text-align: center;
 }
