@@ -1,4 +1,4 @@
-﻿
+﻿@model dynamic
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
@@ -49,7 +49,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="autumn-title">Autumn Travel</p>
+            <p class="autumn-title">Winner Travel</p>
         </div>
     </div>
     <div class="row">
@@ -102,23 +102,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="box-trending">
-                <img src="~/Content/Images/Home/vietnamtrending.jpg" class="box-img-trending" />
-                <div class="overlay">
-                    <div class="text">VIET NAM</div>
+        @foreach (var item in Model.Trending)
+        {
+            <div class="col-md-4 mt-4 mb-4">
+                <div class="box-trending">
+                    <img src="@item.Image" class="box-img-trending" />
+                    <div class="overlay">
+                        <div class="text">@item.Nametrend</div>
+                    </div>
+                    <p class="box-have-trending mt-3">There are @item.Total_tour Tours</p>
+                    <a href="" class="box-newpost-trending">New Posts</a>
+                    <p class="box-content-trending"><a href="" class="box-contenthref-trending">@item.Description</a></p>
                 </div>
-                <p class="box-have-trending mt-3">There are 300 Vietnam Tours</p>
-                <a href="" class="box-newpost-trending">New Posts</a>
-                <p class="box-content-trending"><a href="" class="box-contenthref-trending">Vietnam is in the top 20 most beautiful countries on the planet</a></p>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="box-trending"></div>
-        </div>
-        <div class="col-md-4">
-            <div class="box-trending"></div>
-        </div>
+        }
     </div>
     <div class="row mt-5">
         <div class="col-md-3">
@@ -180,130 +177,23 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/VietNam.jpg" alt="VietNam" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">VIETNAM</h1>
-                        <p>Cao Bang Province</p>
-                        <p>Terraced fields in the valley</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/korea.jpg" alt="Korea" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">KOREA</h1>
-                        <p>Seoul City</p>
-                        <p>Myeongdong walking street</p>
+        @foreach (var item in Model.Locations)
+        {
+            <div class="col-md-4 mt-4 mb-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="@item.img" alt="@item.name" class="img-location">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1 class="name-location">@item.name</h1>
+                            <p>@item.locator</p>
+                            <p>@item.at</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/China.jpg" alt="China" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">China</h1>
-                        <p>Beijing City</p>
-                        <p>Great Wall in Beijing</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/VietNam.jpg" alt="VietNam" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">VIETNAM</h1>
-                        <p>Cao Bang Province</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/korea.jpg" alt="Korea" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">KOREA</h1>
-                        <p>Seoul City</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/korea.jpg" alt="Korea" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">KOREA</h1>
-                        <p>Seoul City</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-4 mb-5">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/VietNam.jpg" alt="VietNam" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">VIETNAM</h1>
-                        <p>Cao Bang Province</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/korea.jpg" alt="Korea" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">KOREA</h1>
-                        <p>Seoul City</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="~/Content/Images/Home/Location/korea.jpg" alt="Korea" class="img-location">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1 class="name-location">KOREA</h1>
-                        <p>Seoul City</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </div>
 

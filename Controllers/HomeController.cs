@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EdithTour.Models;
+using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,9 +11,15 @@ namespace EdithTour.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        private EdithTourEntities db = new EdithTourEntities();
         public ActionResult Index()
         {
-            return View();
+            List<Tourtrending> trending = db.Tourtrendings.ToList();
+            List<Location> locations = db.Locations.ToList();
+            dynamic mymodel = new ExpandoObject();
+            mymodel.Trending = trending;
+            mymodel.Locations = locations;
+            return View(mymodel);
         }
 
         public ActionResult Policy()
@@ -37,6 +45,21 @@ namespace EdithTour.Controllers
         public ActionResult Contact()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Contact(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Contacts.Add(contact);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Contact");
+            }
         }
 
     }

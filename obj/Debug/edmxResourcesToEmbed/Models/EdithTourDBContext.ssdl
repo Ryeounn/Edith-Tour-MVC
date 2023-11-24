@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EdithTourModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID_admin" />
+    </Key>
+    <Property Name="ID_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_customer" Type="int" />
+  </EntityType>
+  <EntityType Name="Airline">
+    <Key>
+      <PropertyRef Name="ID_airline" />
+    </Key>
+    <Property Name="ID_airline" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Air_Code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Place_go" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Place_leave" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Time_go" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Time_leave" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Day_go" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Day_leave" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Ticket" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Note_ticket" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Combo">
+    <Key>
+      <PropertyRef Name="ID_combo" />
+    </Key>
+    <Property Name="ID_combo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Combo_code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_restaurant" Type="int" />
+    <Property Name="ID_hotel" Type="int" />
+    <Property Name="ID_airline" Type="int" />
+    <Property Name="ID_tour" Type="int" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID_customer" />
+    </Key>
+    <Property Name="ID_customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Customer_Level">
+    <Key>
+      <PropertyRef Name="ID_cus_level" />
+    </Key>
+    <Property Name="ID_cus_level" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_customer" Type="int" />
+    <Property Name="ID_order" Type="int" />
+  </EntityType>
+  <EntityType Name="Data_market">
+    <Key>
+      <PropertyRef Name="ID_data_tour" />
+    </Key>
+    <Property Name="ID_data_tour" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_service" Type="int" />
+    <Property Name="ID_order" Type="int" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="ID_hotel" />
+    </Key>
+    <Property Name="ID_hotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Hotel_Code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="locator" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="at" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="img" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID_order" />
+    </Key>
+    <Property Name="ID_order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cus_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="service_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_admin" Type="int" />
+  </EntityType>
+  <EntityType Name="Orderdetails">
+    <Key>
+      <PropertyRef Name="ID_orderdetails" />
+    </Key>
+    <Property Name="ID_orderdetails" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_ticket" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Payment_method" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Total_price" Type="money" Nullable="false" />
+    <Property Name="ID_order" Type="int" />
+  </EntityType>
+  <EntityType Name="Restaurant">
+    <Key>
+      <PropertyRef Name="ID_restaurant" />
+    </Key>
+    <Property Name="ID_restaurant" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Res_Code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1600" Nullable="false" />
+    <Property Name="Time_open" Type="time" Precision="7" Nullable="false" />
+    <Property Name="Time_close" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Menu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="ID_room" />
+    </Key>
+    <Property Name="ID_room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Room_code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Numberof_room" Type="int" Nullable="false" />
+    <Property Name="Evaluate" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="1255" Nullable="false" />
+    <Property Name="ID_hotel" Type="int" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ID_schedule" />
+    </Key>
+    <Property Name="ID_schedule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Start_time" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Day_begin" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="End_time" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="End_Day" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Activities" Type="nvarchar" MaxLength="1500" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ID_service" />
+    </Key>
+    <Property Name="ID_service" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_admin" Type="int" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="ID_ticket" />
+    </Key>
+    <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ticket_code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Numberof_ticket" Type="int" Nullable="false" />
+    <Property Name="Ticket_leave" Type="int" Nullable="false" />
+    <Property Name="Remaining_ticket" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="ID_tour_outside" Type="int" />
+    <Property Name="ID_tour_inside" Type="int" />
+  </EntityType>
+  <EntityType Name="Ticket_Combo">
+    <Key>
+      <PropertyRef Name="ID_ticket" />
+    </Key>
+    <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ticket_combo_code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Numberof_ticket" Type="int" Nullable="false" />
+    <Property Name="Ticket_leave" Type="int" Nullable="false" />
+    <Property Name="Remaining_ticket" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_combo" Type="int" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="ID_tour" />
+    </Key>
+    <Property Name="ID_tour" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tour_trending" Type="varchar" MaxLength="255" />
+    <Property Name="ID_service" Type="int" />
+  </EntityType>
+  <EntityType Name="Tour_Inside">
+    <Key>
+      <PropertyRef Name="ID_tour_inside" />
+    </Key>
+    <Property Name="ID_tour_inside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="ID_tour" Type="int" />
+    <Property Name="ID_schedule" Type="int" />
+  </EntityType>
+  <EntityType Name="Tour_Outside">
+    <Key>
+      <PropertyRef Name="ID_tour_outside" />
+    </Key>
+    <Property Name="ID_tour_outside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="1550" Nullable="false" />
+    <Property Name="Visa_support" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Country_code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ID_tour" Type="int" />
+    <Property Name="ID_schedule" Type="int" />
+  </EntityType>
+  <EntityType Name="Tourtrending">
+    <Key>
+      <PropertyRef Name="Tour_trending" />
+    </Key>
+    <Property Name="Tour_trending" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nametrend" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Total_tour" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="fk__id_list_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Combo">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_air_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Airline" Type="Self.Airline" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Airline">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cus_id_ad">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID_customer" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="ID_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cus_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Customer" Type="Self.Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Customer">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cuslevel_id_cus">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Customer_Level" Type="Self.Customer_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID_customer" />
+      </Principal>
+      <Dependent Role="Customer_Level">
+        <PropertyRef Name="ID_customer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_cuslevel_id_order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Customer_Level" Type="Self.Customer_Level" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID_order" />
+      </Principal>
+      <Dependent Role="Customer_Level">
+        <PropertyRef Name="ID_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_data_id_order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Data_market" Type="Self.Data_market" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID_order" />
+      </Principal>
+      <Dependent Role="Data_market">
+        <PropertyRef Name="ID_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_data_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Data_market" Type="Self.Data_market" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Data_market">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_detail_id_order">
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="Orderdetails" Type="Self.Orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID_order" />
+      </Principal>
+      <Dependent Role="Orderdetails">
+        <PropertyRef Name="ID_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_hotel_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Hotel">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_list_id_air">
+    <End Role="Airline" Type="Self.Airline" Multiplicity="0..1" />
+    <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Airline">
+        <PropertyRef Name="ID_airline" />
+      </Principal>
+      <Dependent Role="Combo">
+        <PropertyRef Name="ID_airline" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_list_id_hotel">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1" />
+    <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID_hotel" />
+      </Principal>
+      <Dependent Role="Combo">
+        <PropertyRef Name="ID_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_list_id_res">
+    <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />
+    <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restaurant">
+        <PropertyRef Name="ID_restaurant" />
+      </Principal>
+      <Dependent Role="Combo">
+        <PropertyRef Name="ID_restaurant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_list_id_tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID_tour" />
+      </Principal>
+      <Dependent Role="Combo">
+        <PropertyRef Name="ID_tour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_order_id_ad">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="ID_admin" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="ID_admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_res_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Restaurant">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ser_id_ad">
+    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Service" Type="Self.Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Admin">
+        <PropertyRef Name="ID_admin" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="ID_admin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tk_id_tour_combo">
+    <End Role="Combo" Type="Self.Combo" Multiplicity="0..1" />
+    <End Role="Ticket_Combo" Type="Self.Ticket_Combo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Combo">
+        <PropertyRef Name="ID_combo" />
+      </Principal>
+      <Dependent Role="Ticket_Combo">
+        <PropertyRef Name="ID_combo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tk_id_tour_in">
+    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="0..1" />
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour_Inside">
+        <PropertyRef Name="ID_tour_inside" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="ID_tour_inside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tk_id_tour_out">
+    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="0..1" />
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour_Outside">
+        <PropertyRef Name="ID_tour_outside" />
+      </Principal>
+      <Dependent Role="Ticket">
+        <PropertyRef Name="ID_tour_outside" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tour_id_sche">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID_schedule" />
+      </Principal>
+      <Dependent Role="Tour_Outside">
+        <PropertyRef Name="ID_schedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tour_id_schedule">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID_schedule" />
+      </Principal>
+      <Dependent Role="Tour_Inside">
+        <PropertyRef Name="ID_schedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tour_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tour_id_tour_out">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID_tour" />
+      </Principal>
+      <Dependent Role="Tour_Inside">
+        <PropertyRef Name="ID_tour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tour_id_tourout">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID_tour" />
+      </Principal>
+      <Dependent Role="Tour_Outside">
+        <PropertyRef Name="ID_tour" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_type_room_id_hotel">
+    <End Role="Hotel" Type="Self.Hotel" Multiplicity="0..1" />
+    <End Role="Room" Type="Self.Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="ID_hotel" />
+      </Principal>
+      <Dependent Role="Room">
+        <PropertyRef Name="ID_hotel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EdithTourModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Airline" EntityType="Self.Airline" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Combo" EntityType="Self.Combo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer_Level" EntityType="Self.Customer_Level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Data_market" EntityType="Self.Data_market" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotel" EntityType="Self.Hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour" EntityType="Self.Tour" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour_Inside" EntityType="Self.Tour_Inside" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tour_Outside" EntityType="Self.Tour_Outside" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tourtrending" EntityType="Self.Tourtrending" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk__id_list_ser" Association="Self.fk__id_list_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Combo" EntitySet="Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_air_id_ser" Association="Self.fk_air_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Airline" EntitySet="Airline" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cus_id_ad" Association="Self.fk_cus_id_ad">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cus_id_ser" Association="Self.fk_cus_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Customer" EntitySet="Customer" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cuslevel_id_cus" Association="Self.fk_cuslevel_id_cus">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Customer_Level" EntitySet="Customer_Level" />
+    </AssociationSet>
+    <AssociationSet Name="fk_cuslevel_id_order" Association="Self.fk_cuslevel_id_order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Customer_Level" EntitySet="Customer_Level" />
+    </AssociationSet>
+    <AssociationSet Name="fk_data_id_order" Association="Self.fk_data_id_order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Data_market" EntitySet="Data_market" />
+    </AssociationSet>
+    <AssociationSet Name="fk_data_id_ser" Association="Self.fk_data_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Data_market" EntitySet="Data_market" />
+    </AssociationSet>
+    <AssociationSet Name="fk_detail_id_order" Association="Self.fk_detail_id_order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="Orderdetails" EntitySet="Orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_hotel_id_ser" Association="Self.fk_hotel_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Hotel" EntitySet="Hotel" />
+    </AssociationSet>
+    <AssociationSet Name="fk_list_id_air" Association="Self.fk_list_id_air">
+      <End Role="Airline" EntitySet="Airline" />
+      <End Role="Combo" EntitySet="Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_list_id_hotel" Association="Self.fk_list_id_hotel">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Combo" EntitySet="Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_list_id_res" Association="Self.fk_list_id_res">
+      <End Role="Restaurant" EntitySet="Restaurant" />
+      <End Role="Combo" EntitySet="Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_list_id_tour" Association="Self.fk_list_id_tour">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="Combo" EntitySet="Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_order_id_ad" Association="Self.fk_order_id_ad">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Restaurant" EntitySet="Restaurant" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ser_id_ad" Association="Self.fk_ser_id_ad">
+      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Service" EntitySet="Service" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tk_id_tour_combo" Association="Self.fk_tk_id_tour_combo">
+      <End Role="Combo" EntitySet="Combo" />
+      <End Role="Ticket_Combo" EntitySet="Ticket_Combo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tk_id_tour_in" Association="Self.fk_tk_id_tour_in">
+      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+      <End Role="Ticket" EntitySet="Ticket" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tk_id_tour_out" Association="Self.fk_tk_id_tour_out">
+      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+      <End Role="Ticket" EntitySet="Ticket" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tour_id_sche" Association="Self.fk_tour_id_sche">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tour_id_schedule" Association="Self.fk_tour_id_schedule">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tour_id_ser" Association="Self.fk_tour_id_ser">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="Tour" EntitySet="Tour" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tour_id_tour_out" Association="Self.fk_tour_id_tour_out">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tour_id_tourout" Association="Self.fk_tour_id_tourout">
+      <End Role="Tour" EntitySet="Tour" />
+      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+    </AssociationSet>
+    <AssociationSet Name="fk_type_room_id_hotel" Association="Self.fk_type_room_id_hotel">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="Room" EntitySet="Room" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

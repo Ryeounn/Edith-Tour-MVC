@@ -51,6 +51,8 @@
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -112,6 +114,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Css\Home.css" />
+    <Content Include="Content\Images\Home\chinatrending.jpg" />
     <Content Include="Content\Images\Home\contact.jpg" />
     <Content Include="Content\Images\Home\Handbook\Australia\australia-1.jpg" />
     <Content Include="Content\Images\Home\Handbook\Australia\australia-2.jpg" />
@@ -210,20 +213,41 @@
     <Content Include="Content\Images\Home\Handbook\Thailand\thailand-5.jpg" />
     <Content Include="Content\Images\Home\Handbook\Thailand\thailand-6.jpg" />
     <Content Include="Content\Images\Home\Handbook\Thailand\thailand-7.jpg" />
+    <Content Include="Content\Images\Home\hotel.jpg" />
     <Content Include="Content\Images\Home\imgcancel.jpg" />
     <Content Include="Content\Images\Home\introduction.jpg" />
     <Content Include="Content\Images\Home\introduction.png" />
     <Content Include="Content\Images\Home\korea.jpg" />
+    <Content Include="Content\Images\Home\koreatrending.jpg" />
+    <Content Include="Content\Images\Home\Location\australia.jpg" />
     <Content Include="Content\Images\Home\Location\China.jpg" />
+    <Content Include="Content\Images\Home\Location\france.jpg" />
+    <Content Include="Content\Images\Home\Location\indonesia.jpg" />
+    <Content Include="Content\Images\Home\Location\italy.jpg" />
+    <Content Include="Content\Images\Home\Location\japan.jpg" />
     <Content Include="Content\Images\Home\Location\korea.jpg" />
     <Content Include="Content\Images\Home\Location\VietNam.jpg" />
+    <Content Include="Content\Images\Home\restaurant.jpg" />
     <Content Include="Content\Images\Home\rules.jpg" />
     <Content Include="Content\Images\Home\Slider\france.png" />
     <Content Include="Content\Images\Home\Slider\hanoi.png" />
     <Content Include="Content\Images\Home\Slider\italy.png" />
     <Content Include="Content\Images\Home\terraces.jpg" />
     <Content Include="Content\Images\Home\thumnailtet.png" />
+    <Content Include="Content\Images\Home\tourinside.jpg" />
+    <Content Include="Content\Images\Home\touroutside.jpg" />
     <Content Include="Content\Images\Home\vietnamtrending.jpg" />
+    <Content Include="Content\Images\Tour\Hottour\hottour.jpg" />
+    <Content Include="Models\EdithTourDBContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
+      <LastGenOutput>EdithTourDBContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EdithTourDBContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
+      <LastGenOutput>EdithTourDBContext.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\Images\Home\Edith.png" />
     <Content Include="Content\Images\Home\Slider\japan.png" />
@@ -235,6 +259,13 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\EdithTourDBContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EdithTourDBContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\EdithTourDBContext.edmx.diagram">
+      <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -243,14 +274,93 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Airline.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\Combo.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Contact.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HandbookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TourController.cs" />
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer_Level.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Data_market.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdithTourDBContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdithTourDBContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdithTourDBContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EdithTourDBContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Hotel.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Location.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orderdetail.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Restaurant.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Room.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Schedule.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Service.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ticket.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ticket_Combo.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tour.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tourtrending.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tour_Inside.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tour_Outside.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -304,6 +414,7 @@
     <Content Include="Views\Handbook\HandbookNhatrang.cshtml" />
     <Content Include="Views\Handbook\HandbookSaigon.cshtml" />
     <Content Include="Views\Handbook\HandbookCantho.cshtml" />
+    <Content Include="Views\Tour\Hottour.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -313,7 +424,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

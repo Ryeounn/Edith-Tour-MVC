@@ -53,15 +53,18 @@
             </div>
         </div>
         <div class="col-md-6 mt-3 m">
-            <form>
-                <input class="form-input" type="text" placeholder="Fullname" />
-                <input class="form-input mt-3" type="email" placeholder="Email" />
-                <input class="form-input mt-3" type="text" placeholder="Phone" />
-                <input class="form-input mt-3" type="text" placeholder="Address" />
-                <textarea class="form-input mt-3" rows="4" placeholder="Comment"></textarea>
-                <input type="submit" class="btn btn-primary mt-3 mb-3 btn-send" value="Send"/>
-            </form>
-        </div>
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+            {
+
+                @Html.AntiForgeryToken()
+                <input class="form-input" type="text" placeholder="Fullname" name="fullname" />
+                <input class="form-input mt-3" type="text" placeholder="Email" name="email"/>
+                <input class="form-input mt-3" type="text" placeholder="Phone" name="phone"/>
+                <input class="form-input mt-3" type="text" placeholder="Address" name="address"/>
+                <textarea class="form-input mt-3" rows="4" placeholder="Comment" name="comment"></textarea>
+                <input type="submit" class="btn btn-primary mt-3 mb-3 btn-send" value="Send" />
+            }
+            </div>
     </div>
     <div class="row">
         <div class="col-md-12">
