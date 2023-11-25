@@ -26,6 +26,10 @@ namespace EdithTour.Models
         public string Name { get; set; }
         public string Tour_trending { get; set; }
         public Nullable<int> ID_service { get; set; }
+        public string Descrip { get; set; }
+        public string Total { get; set; }
+        public string Time { get; set; }
+        public string Img { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Combo> Comboes { get; set; }

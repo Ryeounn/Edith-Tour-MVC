@@ -16,9 +16,11 @@ namespace EdithTour.Controllers
         {
             List<Tourtrending> trending = db.Tourtrendings.ToList();
             List<Location> locations = db.Locations.ToList();
+            List<Tour> tour = db.Tours.ToList();
             dynamic mymodel = new ExpandoObject();
             mymodel.Trending = trending;
             mymodel.Locations = locations;
+            mymodel.Tour = tour;
             return View(mymodel);
         }
 

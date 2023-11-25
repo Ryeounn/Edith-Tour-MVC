@@ -257,6 +257,10 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Tour_trending" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
     <Property Name="ID_service" Type="Int32" />
+    <Property Name="Descrip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Total" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Time" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_tour" FromRole="Tour" ToRole="Combo" />
     <NavigationProperty Name="Service" Relationship="Self.fk_tour_id_ser" FromRole="Tour" ToRole="Service" />
     <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_tour_id_tour_out" FromRole="Tour" ToRole="Tour_Inside" />

@@ -123,6 +123,7 @@ body {
     width: 350px;
     height: 450px;
     border: 1px solid #000;
+    overflow: hidden;
 }
 
 .autumn-title {
@@ -144,8 +145,14 @@ body {
 .img-tour {
     width: 350px;
     height: 250px;
-    border: 1px solid #000;
     position: relative;
+}
+
+.img-tour:hover, .item-travel:hover .img-tour{
+    transform: scale(1.1);
+    transition: 1s;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .have-tour {

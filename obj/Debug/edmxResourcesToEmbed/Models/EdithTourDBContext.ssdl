@@ -215,6 +215,10 @@
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Tour_trending" Type="varchar" MaxLength="255" />
     <Property Name="ID_service" Type="int" />
+    <Property Name="Descrip" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Total" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Time" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Img" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="Tour_Inside">
     <Key>

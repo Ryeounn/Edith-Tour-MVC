@@ -232,6 +232,10 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Tour_trending" ColumnName="Tour_trending" />
           <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

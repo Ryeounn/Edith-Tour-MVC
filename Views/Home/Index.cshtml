@@ -49,30 +49,23 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <p class="autumn-title">Winner Travel</p>
+            <p class="autumn-title">New Travel</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <div class="item-travel">
-                <img src="~/Content/Images/Home/logo.png" class="img-tour" />
-                <h6 class="childtitle-tour">Japan Tour</h6>
-                <h6 class="have-tour mt-2">21 Tour</h6>
-                <span class="timeline-tour"><h6 class="time-line">6 Days 4 Nights</h6></span>
-                <a href="" class="link-detailtour"><p class="title-nametour">Japan Travel [Chitose - Noboribetsu - Jozankeu - Otaru - Sapporo]</p></a>
-                <a href="" class="btn btn-primary btn-buy">Buy</a>
+        @foreach (var item in Model.Tour)
+        {
+            <div class="col-md-4">
+                <div class="item-travel">
+                    <img src="@item.Img" class="img-tour" />
+                    <h6 class="childtitle-tour">@item.Tour_trending</h6>
+                    <h6 class="have-tour mt-2">@item.Total Tours</h6>
+                    <span class="timeline-tour"><h6 class="time-line">@item.Time</h6></span>
+                    <a href="" class="link-detailtour"><p class="title-nametour">@item.Descrip</p></a>
+                    <a href="" class="btn btn-primary btn-buy">Buy</a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="item-travel">
-                <img src="~/Images/Home/logo.png" width="380" height="250" />
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="item-travel">
-                <img src="~/Images/Home/logo.png" width="380" height="250" />
-            </div>
-        </div>
+        }
     </div>
 </div>
 <div class="container">

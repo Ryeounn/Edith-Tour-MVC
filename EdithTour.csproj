@@ -227,6 +227,9 @@
     <Content Include="Content\Images\Home\Location\japan.jpg" />
     <Content Include="Content\Images\Home\Location\korea.jpg" />
     <Content Include="Content\Images\Home\Location\VietNam.jpg" />
+    <Content Include="Content\Images\Home\newjapan.jpg" />
+    <Content Include="Content\Images\Home\newkorea.jpg" />
+    <Content Include="Content\Images\Home\newvietnam.jpg" />
     <Content Include="Content\Images\Home\restaurant.jpg" />
     <Content Include="Content\Images\Home\rules.jpg" />
     <Content Include="Content\Images\Home\Slider\france.png" />

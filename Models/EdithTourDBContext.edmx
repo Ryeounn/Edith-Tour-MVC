@@ -220,6 +220,10 @@
           <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Tour_trending" Type="varchar" MaxLength="255" />
           <Property Name="ID_service" Type="int" />
+          <Property Name="Descrip" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Total" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Time" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Img" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityType Name="Tour_Inside">
           <Key>
@@ -962,6 +966,10 @@
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Tour_trending" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
+          <Property Name="Descrip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Total" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Time" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_tour" FromRole="Tour" ToRole="Combo" />
           <NavigationProperty Name="Service" Relationship="Self.fk_tour_id_ser" FromRole="Tour" ToRole="Service" />
           <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_tour_id_tour_out" FromRole="Tour" ToRole="Tour_Inside" />
@@ -1689,6 +1697,10 @@
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Tour_trending" ColumnName="Tour_trending" />
                 <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+                <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
