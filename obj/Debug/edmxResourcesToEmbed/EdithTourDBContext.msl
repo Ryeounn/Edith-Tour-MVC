@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EdithTourModelStoreContainer" CdmEntityContainer="EdithTourEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="EdithTourModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ID_customer" ColumnName="ID_customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Airlines">
+      <EntityTypeMapping TypeName="EdithTourModel.Airline">
+        <MappingFragment StoreEntitySet="Airline">
+          <ScalarProperty Name="ID_airline" ColumnName="ID_airline" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Air_Code" ColumnName="Air_Code" />
+          <ScalarProperty Name="Place_go" ColumnName="Place_go" />
+          <ScalarProperty Name="Place_leave" ColumnName="Place_leave" />
+          <ScalarProperty Name="Time_go" ColumnName="Time_go" />
+          <ScalarProperty Name="Time_leave" ColumnName="Time_leave" />
+          <ScalarProperty Name="Day_go" ColumnName="Day_go" />
+          <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Ticket" ColumnName="Ticket" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Note_ticket" ColumnName="Note_ticket" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comboes">
+      <EntityTypeMapping TypeName="EdithTourModel.Combo">
+        <MappingFragment StoreEntitySet="Combo">
+          <ScalarProperty Name="ID_combo" ColumnName="ID_combo" />
+          <ScalarProperty Name="Combo_code" ColumnName="Combo_code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_restaurant" ColumnName="ID_restaurant" />
+          <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
+          <ScalarProperty Name="ID_airline" ColumnName="ID_airline" />
+          <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="EdithTourModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="EdithTourModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="ID_customer" ColumnName="ID_customer" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_Level">
+      <EntityTypeMapping TypeName="EdithTourModel.Customer_Level">
+        <MappingFragment StoreEntitySet="Customer_Level">
+          <ScalarProperty Name="ID_cus_level" ColumnName="ID_cus_level" />
+          <ScalarProperty Name="ID_customer" ColumnName="ID_customer" />
+          <ScalarProperty Name="ID_order" ColumnName="ID_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Data_market">
+      <EntityTypeMapping TypeName="EdithTourModel.Data_market">
+        <MappingFragment StoreEntitySet="Data_market">
+          <ScalarProperty Name="ID_data_tour" ColumnName="ID_data_tour" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+          <ScalarProperty Name="ID_order" ColumnName="ID_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="EdithTourModel.Hotel">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Hotel_Code" ColumnName="Hotel_Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="EdithTourModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="locator" ColumnName="locator" />
+          <ScalarProperty Name="at" ColumnName="at" />
+          <ScalarProperty Name="img" ColumnName="img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="EdithTourModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID_order" ColumnName="ID_order" />
+          <ScalarProperty Name="Cus_Name" ColumnName="Cus_Name" />
+          <ScalarProperty Name="service_name" ColumnName="service_name" />
+          <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orderdetails">
+      <EntityTypeMapping TypeName="EdithTourModel.Orderdetail">
+        <MappingFragment StoreEntitySet="Orderdetails">
+          <ScalarProperty Name="ID_orderdetails" ColumnName="ID_orderdetails" />
+          <ScalarProperty Name="Name_ticket" ColumnName="Name_ticket" />
+          <ScalarProperty Name="Payment_method" ColumnName="Payment_method" />
+          <ScalarProperty Name="Numberof_ticket" ColumnName="Numberof_ticket" />
+          <ScalarProperty Name="Total_price" ColumnName="Total_price" />
+          <ScalarProperty Name="ID_order" ColumnName="ID_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurants">
+      <EntityTypeMapping TypeName="EdithTourModel.Restaurant">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="ID_restaurant" ColumnName="ID_restaurant" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Res_Code" ColumnName="Res_Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Time_open" ColumnName="Time_open" />
+          <ScalarProperty Name="Time_close" ColumnName="Time_close" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Menu" ColumnName="Menu" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="EdithTourModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="ID_room" ColumnName="ID_room" />
+          <ScalarProperty Name="Room_code" ColumnName="Room_code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Numberof_room" ColumnName="Numberof_room" />
+          <ScalarProperty Name="Evaluate" ColumnName="Evaluate" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="EdithTourModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+          <ScalarProperty Name="Start_time" ColumnName="Start_time" />
+          <ScalarProperty Name="Day_begin" ColumnName="Day_begin" />
+          <ScalarProperty Name="End_time" ColumnName="End_time" />
+          <ScalarProperty Name="End_Day" ColumnName="End_Day" />
+          <ScalarProperty Name="Activities" ColumnName="Activities" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="EdithTourModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tickets">
+      <EntityTypeMapping TypeName="EdithTourModel.Ticket">
+        <MappingFragment StoreEntitySet="Ticket">
+          <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Ticket_code" ColumnName="Ticket_code" />
+          <ScalarProperty Name="Numberof_ticket" ColumnName="Numberof_ticket" />
+          <ScalarProperty Name="Ticket_leave" ColumnName="Ticket_leave" />
+          <ScalarProperty Name="Remaining_ticket" ColumnName="Remaining_ticket" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ID_tour_outside" ColumnName="ID_tour_outside" />
+          <ScalarProperty Name="ID_tour_inside" ColumnName="ID_tour_inside" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ticket_Combo">
+      <EntityTypeMapping TypeName="EdithTourModel.Ticket_Combo">
+        <MappingFragment StoreEntitySet="Ticket_Combo">
+          <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
+          <ScalarProperty Name="Ticket_combo_code" ColumnName="Ticket_combo_code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Numberof_ticket" ColumnName="Numberof_ticket" />
+          <ScalarProperty Name="Ticket_leave" ColumnName="Ticket_leave" />
+          <ScalarProperty Name="Remaining_ticket" ColumnName="Remaining_ticket" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ID_combo" ColumnName="ID_combo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="EdithTourModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tour_trending" ColumnName="Tour_trending" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+          <ScalarProperty Name="Descrip" ColumnName="Descrip" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tour_Inside">
+      <EntityTypeMapping TypeName="EdithTourModel.Tour_Inside">
+        <MappingFragment StoreEntitySet="Tour_Inside">
+          <ScalarProperty Name="ID_tour_inside" ColumnName="ID_tour_inside" />
+          <ScalarProperty Name="Tour_Code" ColumnName="Tour_Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tour_Outside">
+      <EntityTypeMapping TypeName="EdithTourModel.Tour_Outside">
+        <MappingFragment StoreEntitySet="Tour_Outside">
+          <ScalarProperty Name="ID_tour_outside" ColumnName="ID_tour_outside" />
+          <ScalarProperty Name="Tour_Code" ColumnName="Tour_Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Visa_support" ColumnName="Visa_support" />
+          <ScalarProperty Name="Country_code" ColumnName="Country_code" />
+          <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tourtrendings">
+      <EntityTypeMapping TypeName="EdithTourModel.Tourtrending">
+        <MappingFragment StoreEntitySet="Tourtrending">
+          <ScalarProperty Name="Tour_trending" ColumnName="Tour_trending" />
+          <ScalarProperty Name="Nametrend" ColumnName="Nametrend" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Total_tour" ColumnName="Total_tour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

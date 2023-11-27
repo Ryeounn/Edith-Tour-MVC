@@ -1,0 +1,99 @@
+﻿@model List<EdithTour.Models.Customer>
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div class="container-fluid">
+    <div id="Register-content">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-register" }))
+        {
+            //@Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+            <p class="title-register">Register</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <th>Name: </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="text" class="input" name="Name">
+                            <span>Name</span>
+                        </label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Birthday: </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="date" class="input" name="Birthday">
+                            <span>Birthday</span>
+
+                        </label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        Email:
+                    </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="email" class="input" name="Email">
+                            <span>Email</span>
+                        </label>
+
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        Phone:
+                    </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="text" class="input" name="Phone">
+                            <span>Phone</span>
+                        </label>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        Address:
+                    </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="text" class="input" name="Address">
+                            <span>Address</span>
+                        </label>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>Username: </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="text" class="input" name="Username">
+                            <span>Username</span>
+                        </label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Password: </th>
+                    <th>
+                        <label>
+                            <input required placeholder="" type="password" class="input" name="Password">
+                            <span>Password</span>
+                        </label>
+                    </th>
+                    <th></th>
+                </tr>
+                
+            </table>
+            <input class="btn btn-primary mt-3" type="submit" value="Register" name="submit">
+        }
+    </div>
+</div>

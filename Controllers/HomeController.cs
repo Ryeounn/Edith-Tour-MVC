@@ -63,6 +63,27 @@ namespace EdithTour.Controllers
                 return RedirectToAction("Contact");
             }
         }
+        public ActionResult Danang()
+        {
 
+            return View();
+        }
+        public ActionResult Quangbinh()
+        {
+            return View();
+        }
+
+        public ActionResult Hanoi()
+        {
+            return View();
+        }
+        public ActionResult Nhatrang()
+        {
+            return View();
+        }
+        public ActionResult Phuquoc()
+        {
+            return View();
+        }
     }
 }

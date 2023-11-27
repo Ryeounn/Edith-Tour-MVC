@@ -97,6 +97,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Content\Admin.css" />
+    <Content Include="Areas\Admin\Scripts\Script.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -241,6 +243,108 @@
     <Content Include="Content\Images\Home\touroutside.jpg" />
     <Content Include="Content\Images\Home\vietnamtrending.jpg" />
     <Content Include="Content\Images\Tour\Hottour\hottour.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\chodalat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\chualinhphuoc.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\coffee.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\da-lat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\dalat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\doivongcanh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\hamruoumongmotuu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\hotuyenlam.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\mecungtinhyeu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\nhathodomainde marie.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\nuilangbiang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\thacdatanla.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\thunglungtinhyeu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\thunglungvang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\vanlytruongthanh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaLat\vuondautuoi.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\bana.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\beach-da-nang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\chohan.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\chuathienmu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\culaocham.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\dainoi.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\danang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\hoian.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\langkhaidinh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-DaNang\sontra.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\baichay.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\baidinh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\catcat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\fansipan.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\halong.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\hanoi.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\hcm.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\hoguom.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\langhcm.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\motcot.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\thiencung.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\tranquoc.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\vinhhalong.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-HaNoi\yentu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\baicayme.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\baitranh-honmieu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\betomhum.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\bienbinhhung.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\consetre.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\haisan.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\nha-trang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\nhahatdo.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\nhatrang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\nhatranggia.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\vienhaiduonghoc.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\vinhnhatrang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\vinpearlnha trang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-NhaTrang\vuonnhoninhthuan.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\aquatopia.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\bachdang.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\baisao.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\cangdinhcau.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\captreohonthom.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\cauca.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\dongnam.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\ganhdau.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\grandworld.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\haisankho.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\hon-thom.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\hoquoc.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\kayak.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\ngoctrai.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\nhatu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\nuocnam.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\ongmat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\phu-quoc-island.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\rachvem.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\ruousim.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\Rừng Nguyên Sinh Phú Quốc.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\suoitranh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\vinpearlsafari.jpg" />
+    <Content Include="Content\Images\Tour\Inside\CanTho-PhuQuoc\vuontieu.jpg" />
+    <Content Include="Content\Images\Tour\Inside\dalat.jpg" />
+    <Content Include="Content\Images\Tour\Inside\poster\Edith Tour.png" />
+    <Content Include="Content\Images\Tour\Inside\poster\EdithTourBien.png" />
+    <Content Include="Content\Images\Tour\Inside\poster\letgo.png" />
+    <Content Include="Content\Images\Tour\Inside\poster\test-1.jpg" />
+    <Content Include="Content\Images\Tour\Inside\poster\test-2.jpg" />
+    <Content Include="Content\Images\Tour\Inside\poster\test-3.jpg" />
+    <Content Include="Content\Images\Tour\Inside\poster\xeEdith Tour.png" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\danhay.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\hangtoi.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\phongnha.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\quangbinh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\thienduong.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\vonguyengiap.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-QuangBinh\vungchua.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\bachdinh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\longhai.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\longson.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\longthanh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\nuocnong.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\phodem.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\tuong.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\vanthanh.jpg" />
+    <Content Include="Content\Images\Tour\Inside\SaiGon-VungTau\vungtau.jpg" />
     <Content Include="Models\EdithTourDBContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
@@ -262,6 +366,8 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdminPage1.cshtml" />
     <EntityDeploy Include="Models\EdithTourDBContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EdithTourDBContext.Designer.cs</LastGenOutput>
@@ -269,6 +375,7 @@
     <Content Include="Models\EdithTourDBContext.edmx.diagram">
       <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -283,6 +390,8 @@
     <Compile Include="Models\Airline.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\Combo.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
@@ -418,6 +527,13 @@
     <Content Include="Views\Handbook\HandbookSaigon.cshtml" />
     <Content Include="Views\Handbook\HandbookCantho.cshtml" />
     <Content Include="Views\Tour\Hottour.cshtml" />
+    <Content Include="Views\Home\Danang.cshtml" />
+    <Content Include="Views\Home\Quangbinh.cshtml" />
+    <Content Include="Views\Home\Hanoi.cshtml" />
+    <Content Include="Views\Home\Nhatrang.cshtml" />
+    <Content Include="Views\Home\Phuquoc.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Information.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -427,6 +543,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
