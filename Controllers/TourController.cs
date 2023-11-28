@@ -9,7 +9,11 @@ namespace EdithTour.Controllers
     public class TourController : Controller
     {
         // GET: Tour
-        public ActionResult Hottour()
+        public ActionResult Tour_Inside()
+        {
+            return View();
+        }
+        public ActionResult Tour_Outside()
         {
             return View();
         }

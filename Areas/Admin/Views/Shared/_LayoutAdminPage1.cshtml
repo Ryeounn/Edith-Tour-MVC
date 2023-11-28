@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model EdithTour.Models.Admin
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -20,28 +21,33 @@
         <header>
             <div class="image-text">
                 @*<?php
-                    if (isset($_SESSION['useradmin']) && ($_SESSION['useradmin'])) {
-                    $user = $_SESSION['inforadmin'][0];
-                    $pass = $_SESSION['inforadmin'][1];
-                    $result = $classer->showUserByID($conn, $user, $pass);
-                    if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                    ?>*@
+        if (isset($_SESSION['useradmin']) && ($_SESSION['useradmin'])) {
+        $user = $_SESSION['inforadmin'][0];
+        $pass = $_SESSION['inforadmin'][1];
+        $result = $classer->showUserByID($conn, $user, $pass);
+        if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+        ?>*@
+
                 <span class="image">
-                    <a href="information.php"><img id="imager" onchange="chooseFile(this)" src="@Session["Avatar"]"></a>
+                    @{
+                        string imageURL = "~\\Images\\" + @Session["Avatar"];
+                        <a href="information.php"><img id="imager" onchange="chooseFile(this)" src="@Url.Content(imageURL)"></a>
+                    }
+
                 </span>
 
-                <div class="text header-text">
-                    <span class="name">@Session["Name"]</span>
-                    <span class="profession">@Session["Username"]</span>
-                </div>
+                    <div class="text header-text">
+                        <span class="name">@Session["Name"]</span>
+                        <span class="profession">@Session["Username"]</span>
+                    </div>
                 @*<?php
-                    }
-                    }
-                    } else {
-                    $_SESSION['useradmin'] = "Blank";
-                    }
-                    ?>*@
+        }
+        }
+        } else {
+        $_SESSION['useradmin'] = "Blank";
+        }
+        ?>*@
             </div>
 
             <i class="fas fa-chevron-right toggle"></i>
@@ -74,26 +80,26 @@
                     </li>
                     <li class="nav-link">
                         <a href="useradmin.php">
+                            <i class="fas fa-suitcase icon"></i>
+                            <span class="text nav-text">Service</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="orderadmin.php">
                             <i class="fas fa-users icon"></i>
                             <span class="text nav-text">User</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="orderadmin.php">
-                            <i class="fas fa-clipboard-check icon"></i>
+                        <a href="revenue.php">
+                            <i class="fas fa-clipboard icon"></i>
                             <span class="text nav-text">Order</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="revenue.php">
+                        <a href="notifications.php">
                             <i class="fas fa-chart-pie icon"></i>
                             <span class="text nav-text">Revenue</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="notifications.php">
-                            <i class="fas fa-bell icon"></i>
-                            <span class="text nav-text">Notifications</span>
                         </a>
                     </li>
                 </ul>
@@ -120,10 +126,9 @@
             </div>
         </div>
     </nav>
-    <div>
+    <section class="home">
         @RenderBody()
-    </div>
+    </section>
     <script src="@Url.Content("~/Areas/Admin/Scripts/Script.js")"></script>
-    
 </body>
 </html>

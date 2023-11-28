@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminPage1.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="add-title">What do you want to add?</p>
+        </div>
+        <div class="col-lg-12">
+            <p class="add-sub">Choose an add</p>
+        </div>
+        <div class="col-md-12">
+            <div class="login">
+                <div class="dropdown">
+                    <a href="@Url.Action("Information", "Account")" class="dropbtn">Choose</a>
+                    <div class="dropdown-content">
+                        <a class="" href="@Url.Action("Register", "Account")">Tour Inside</a>
+                        <a class="" href="@Url.Action("Login", "Account")">Tour Outside</a>
+                        <a class="" href="@Url.Action("Register", "Account")">Tour Trending</a>
+                        <a class="" href="@Url.Action("Login", "Account")">Users</a>
+                        <a class="" href="@Url.Action("Register", "Account")">Restaurant</a>
+                        <a class="" href="@Url.Action("Login", "Account")">Hotel</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

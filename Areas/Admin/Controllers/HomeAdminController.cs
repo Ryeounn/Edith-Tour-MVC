@@ -19,5 +19,6 @@ namespace EdithTour.Areas.Admin.Controllers
             Session.Clear();//remove session
             return RedirectToAction("Login");
         }
+
     }
 }

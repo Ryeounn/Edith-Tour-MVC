@@ -7,6 +7,9 @@ using System.Text;
 using System.Web;
 using EdithTour.Areas.Admin;
 using System.Web.Mvc;
+using System.Data.Entity.Migrations;
+using System.Web.UI.WebControls;
+using System.IO;
 
 namespace EdithTour.Controllers
 {
@@ -149,6 +152,147 @@ namespace EdithTour.Controllers
         public ActionResult Information()
         {
             return View();
+        }
+
+        //[HttpPost]
+        //public ActionResult Information(string Password, Customer customer)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = Session["Username"].ToString();
+        //        var fpass = Session["Password"].ToString();
+        //        var md5 = GetMD5(Password);
+        //        var data = db.Customers.FirstOrDefault(s => s.Username == user && md5 == fpass);
+        //        if (data == null)
+        //        {
+        //            Customer customeredit = db.Customers.Where(row => row.Username == user).FirstOrDefault();
+        //            customeredit.Password = md5;
+        //            db.SaveChanges();
+        //            Session.Clear();
+        //            return RedirectToAction("Index", "Home");
+        //        }
+        //        else
+        //        {
+        //            return RedirectToAction("Register", "Account");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return View("Login");
+        //    }
+        
+        //}
+
+
+        //[HttpPost]
+        //public ActionResult Edit(Customer customer, HttpPostedFileBase imageFile)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = Session["Username"].ToString();
+        //        var data = db.Customers.FirstOrDefault(s => s.Username == user);
+        //        if(data == null)
+        //        {
+        //            Customer customeredit = db.Customers.Where(row => row.Username == user).FirstOrDefault();
+        //            if (imageFile != null)
+        //            {
+        //                string filename = customer.Username + ".jpg";
+        //                string path = Path.Combine(Server.MapPath("~/Image"), filename);
+        //                imageFile.SaveAs(path);
+        //                customeredit.Avatar = filename;
+        //            }
+        //            customeredit.Name = customer.Name;
+        //            customeredit.Email = customer.Email;
+        //            customeredit.Address = customer.Address;
+        //            customeredit.Birthday = customer.Birthday;
+        //            customeredit.Phone = customer.Phone;
+        //            db.SaveChanges();
+        //            return View(customer);
+        //        }
+        //        else
+        //        {
+        //            return View("Information", "Account");
+        //        }
+        //    }
+        //    return View();
+        //}
+
+        public ActionResult General()
+        {
+            var user = Session["Username"].ToString();
+            Customer customer = db.Customers.Where(s => s.Username == user).FirstOrDefault();
+            return View(customer);
+        }
+
+        [HttpPost]
+        public ActionResult General(Customer customer, HttpPostedFileBase imageFiles)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = Session["Username"].ToString();
+                var data = db.Customers.FirstOrDefault(s => s.Username == user);
+                if (data != null)
+                {
+                    Customer customeredit = db.Customers.Where(row => row.Username == user).FirstOrDefault();
+                    customeredit.Name = customer.Name;
+                    customeredit.Email = customer.Email;
+                    customeredit.Address = customer.Address;
+                    customeredit.Birthday = customer.Birthday;
+                    customeredit.Phone = customer.Phone;
+                    string filename = customeredit.Username + ".jpg";
+                    string path = Path.Combine(Server.MapPath("~/Images"), filename);
+                    imageFiles.SaveAs(path);
+                    customeredit.Avatar = filename;
+                    db.SaveChanges();
+                    return RedirectToAction("Information", "Account");
+                }
+                else
+                {
+                    return RedirectToAction("Information", "Account");
+                }
+            }
+            return View();
+        }
+
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangePassword(string Password, Customer customer, string New)
+        {
+            var user = Session["Username"].ToString();
+            var Pass = GetMD5(Password);
+            var NewPass = GetMD5(New);
+
+            //var fpassword = GetMD5(Password);
+            var data = db.Customers.Where(s => s.Username == user && s.Password == Pass);
+            if (data != null)
+            {
+
+                var cus = db.Customers.Where(s => s.Username == user && s.Password == NewPass).FirstOrDefault();
+                if (cus == null)
+                {
+                    var customeredit = db.Customers.FirstOrDefault(s => s.Username == user);
+                    customeredit.Password = NewPass;
+                    db.SaveChanges();
+                    return View("Information");
+                }
+                else
+                {
+                    return RedirectToAction("Information");
+
+                }
+            }
+
+            else
+            {
+                return View("Login");
+
+            }
+
+
         }
     }
 }
