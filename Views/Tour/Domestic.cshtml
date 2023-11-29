@@ -1,0 +1,46 @@
+﻿@{ 
+    Layout = null;
+}
+    <form action="/Tour/Domestic" method="post">
+        <div class="row justify-content-between align-items-end">
+            <div class="col-md-12 mt-4 mx-5 list-group account-settings-links">
+                <a href="" class="btn btn-outline-primary btn-select list-group-item active" data-toggle="list" id="domestic">Domestic</a>
+                <a href="" class="btn btn-outline-primary btn-select list-group-item" data-toggle="list" id="foreign">Foreign</a>
+            </div>
+
+            <div class="col-md-12 mt-4 mx-5 mb-2">
+                <input type="text" class="form-control input-search" placeholder="Enter a destination or property" id="place" name="place">
+            </div>
+
+            <div class="col-md-12 mt-4 mx-5">
+                <label for="Daygo"><i class="fas fa-plane-departure"></i></label>
+                <input type="date" class="form-control btn-days d-inline-block mx-5" min="2023-11-29" id="daygo" name="daygo">
+                <label for="Daygo" class=""><i class="fas fa-plane-arrival"></i></label>
+                <input type="date" class="form-control btn-days d-inline-block mx-5" min="2023-11-29" id="dayleave" name="dayleave">
+                <label for="room"><i class="fas fa-users"></i></label>
+                <select name="people" id="people" class="form-control btn-user d-inline-block mx-5">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                </select>
+            </div>
+
+            <div class="col-md-4"></div>
+            <div class="col-md-4 mt-5">
+                <button type="submit" class="form-control btn btn-primary w-100">Check Availability</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </form>
+    <script>
+        $('#foreign').click(function () {
+            $("#change-go").load('/Tour/Foreign');
+        });
+
+        $('#domestic').click(function () {
+            $("#change-go").load('/Tour/Dometic');
+        });
+    </script>

@@ -68,7 +68,8 @@ namespace EdithTour.Controllers
                     Session["Avatar"] = data_ad.FirstOrDefault().Avatar;
                     Session["Password"] = f_password;
                     Session["Username"] = data_ad.FirstOrDefault().Username;
-                    return View("~/Areas/Admin/Views/HomeAdmin/Index.cshtml");
+                    //return View("~/Areas/Admin/Views/HomeAdmin/Index.cshtml");
+                    return RedirectToAction("Index", "Home", new {area="Admin"});
                 }
                 else
                 {

@@ -25,6 +25,13 @@ namespace EdithTour.Models
         public string Name { get; set; }
         public string Image { get; set; }
         public string Place { get; set; }
+        public string Place_go { get; set; }
+        public string Place_leave { get; set; }
+        public string Time_go { get; set; }
+        public string Time_leave { get; set; }
+        public string Day_go { get; set; }
+        public string Day_leave { get; set; }
+        public Nullable<int> Numberofpeople { get; set; }
         public string Description { get; set; }
         public string Note { get; set; }
         public Nullable<int> ID_tour { get; set; }

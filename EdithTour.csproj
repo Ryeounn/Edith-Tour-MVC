@@ -368,6 +368,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdminPage1.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Outside.cshtml" />
     <EntityDeploy Include="Models\EdithTourDBContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EdithTourDBContext.Designer.cs</LastGenOutput>
@@ -375,8 +378,7 @@
     <Content Include="Models\EdithTourDBContext.edmx.diagram">
       <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\HomeAdmin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Inside.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -386,15 +388,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Models\Admin.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Airline.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\Combo.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
@@ -536,10 +538,12 @@
     <Content Include="Views\Home\Phuquoc.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Information.cshtml" />
-    <Content Include="Views\Tour\Tour_Inside.cshtml" />
-    <Content Include="Views\Tour\Tour_Outside.cshtml" />
     <Content Include="Views\Account\ChangePassword.cshtml" />
     <Content Include="Views\Account\General.cshtml" />
+    <Content Include="Views\Tour\Inside.cshtml" />
+    <Content Include="Views\Tour\Outside.cshtml" />
+    <Content Include="Views\Tour\Foreign.cshtml" />
+    <Content Include="Views\Tour\Domestic.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

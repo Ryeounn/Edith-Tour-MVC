@@ -4,29 +4,58 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminPage1.cshtml";
 }
 
+<div class="text">
+    <div class="list-add list-group account-settings-links">
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">Tour Inside</a>
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">Tour Outside</a>
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">Tour Trending</a>
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">User</a>
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">Restaurant</a>
+        <a href="" class="list-group-item list-group-item-action" data-toggle="list">Hotel</a>
+    </div>
+</div>
+
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="add-title">What do you want to add?</p>
-        </div>
-        <div class="col-lg-12">
-            <p class="add-sub">Choose an add</p>
-        </div>
-        <div class="col-md-12">
-            <div class="login">
-                <div class="dropdown">
-                    <a href="@Url.Action("Information", "Account")" class="dropbtn">Choose</a>
-                    <div class="dropdown-content">
-                        <a class="" href="@Url.Action("Register", "Account")">Tour Inside</a>
-                        <a class="" href="@Url.Action("Login", "Account")">Tour Outside</a>
-                        <a class="" href="@Url.Action("Register", "Account")">Tour Trending</a>
-                        <a class="" href="@Url.Action("Login", "Account")">Users</a>
-                        <a class="" href="@Url.Action("Register", "Account")">Restaurant</a>
-                        <a class="" href="@Url.Action("Login", "Account")">Hotel</a>
-                    </div>
-                </div>
-                
+    <div id="loader">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="title-add mt-5">Create Tour Inside</p>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <p class="form-text title-form">Tour Code</p>
+                <p class="form-text title-form mt-4">Name</p>
+                <p class="form-text title-form mt-4">Place</p>
+                <p class="form-text title-form mt-4">Departure</p>
+                <p class="form-text title-form mt-4">Arrival</p>
+                <p class="form-text title-form mt-4">Time Go</p>
+                <p class="form-text title-form mt-4">Time Leave</p>
+                <p class="form-text title-form mt-4">Day Go</p>
+                <p class="form-text title-form mt-4">Day Leave</p>
+                <p class="form-text title-form mt-4">NumberofTour</p>
+                <p class="form-text title-form mt-4">Description</p>
+                <p class="form-text title-form mt-4">Note</p>
+            </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                    <form action="/action_page.php">
+                        <input type="text" class="form-control" name="tour_code" />
+                        <input type="text" class="form-control mt-3" name="name" />
+                        <input type="text" class="form-control mt-2" name="place" />
+                        <input type="text" class="form-control mt-2" name="place_go" />
+                        <input type="text" class="form-control mt-2" name="place_leave" />
+                        <input type="text" class="form-control mt-2" name="time_go" />
+                        <input type="text" class="form-control mt-2" name="time_leave" />
+                        <input type="text" class="form-control mt-2" name="day_go" />
+                        <input type="text" class="form-control mt-2" name="day_leave" />
+                        <input type="text" class="form-control mt-2" name="numberoftour" />
+                        <input type="text" class="form-control mt-2" name="description" />
+                        <input type="text" class="form-control mt-2" name="note" />
+                    </form>
+                </div>
+            
         </div>
     </div>
 </div>

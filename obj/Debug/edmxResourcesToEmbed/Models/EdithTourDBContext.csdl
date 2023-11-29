@@ -6,12 +6,12 @@
     </Key>
     <Property Name="ID_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ID_customer" Type="Int32" />
     <NavigationProperty Name="Customer" Relationship="Self.fk_cus_id_ad" FromRole="Admin" ToRole="Customer" />
@@ -79,8 +79,8 @@
     <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ID_service" Type="Int32" />
     <NavigationProperty Name="Admins" Relationship="Self.fk_cus_id_ad" FromRole="Customer" ToRole="Admin" />
@@ -155,7 +155,9 @@
     <Property Name="Numberof_ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Total_price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="ID_order" Type="Int32" />
+    <Property Name="ID_service" Type="Int32" />
     <NavigationProperty Name="Order" Relationship="Self.fk_detail_id_order" FromRole="Orderdetails" ToRole="Order" />
+    <NavigationProperty Name="Service" Relationship="Self.fk_detail_id_ser" FromRole="Orderdetails" ToRole="Service" />
   </EntityType>
   <EntityType Name="Restaurant">
     <Key>
@@ -214,6 +216,7 @@
     <NavigationProperty Name="Customers" Relationship="Self.fk_cus_id_ser" FromRole="Service" ToRole="Customer" />
     <NavigationProperty Name="Data_market" Relationship="Self.fk_data_id_ser" FromRole="Service" ToRole="Data_market" />
     <NavigationProperty Name="Hotels" Relationship="Self.fk_hotel_id_ser" FromRole="Service" ToRole="Hotel" />
+    <NavigationProperty Name="Orderdetails" Relationship="Self.fk_detail_id_ser" FromRole="Service" ToRole="Orderdetails" />
     <NavigationProperty Name="Restaurants" Relationship="Self.fk_res_id_ser" FromRole="Service" ToRole="Restaurant" />
     <NavigationProperty Name="Tours" Relationship="Self.fk_tour_id_ser" FromRole="Service" ToRole="Tour" />
   </EntityType>
@@ -275,6 +278,13 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Numberofpeople" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
     <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="ID_tour" Type="Int32" />
@@ -292,6 +302,13 @@
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Numberofpeople" Type="Int32" />
     <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Note" Type="String" MaxLength="1550" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Visa_support" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
@@ -528,6 +545,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_detail_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Orderdetails" Type="Self.Orderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Orderdetails">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_res_id_ser">
     <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
     <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="*" />
@@ -716,6 +745,10 @@
     </AssociationSet>
     <AssociationSet Name="fk_detail_id_order" Association="Self.fk_detail_id_order">
       <End Role="Order" EntitySet="Orders" />
+      <End Role="Orderdetails" EntitySet="Orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_detail_id_ser" Association="Self.fk_detail_id_ser">
+      <End Role="Service" EntitySet="Services" />
       <End Role="Orderdetails" EntitySet="Orderdetails" />
     </AssociationSet>
     <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">

@@ -22,6 +22,7 @@ namespace EdithTour.Models
             this.Customers = new HashSet<Customer>();
             this.Data_market = new HashSet<Data_market>();
             this.Hotels = new HashSet<Hotel>();
+            this.Orderdetails = new HashSet<Orderdetail>();
             this.Restaurants = new HashSet<Restaurant>();
             this.Tours = new HashSet<Tour>();
         }
@@ -41,6 +42,8 @@ namespace EdithTour.Models
         public virtual ICollection<Data_market> Data_market { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hotel> Hotels { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orderdetail> Orderdetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Restaurant> Restaurants { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

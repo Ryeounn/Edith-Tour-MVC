@@ -32,7 +32,7 @@
                 <span class="image">
                     @{
                         string imageURL = "~\\Images\\" + @Session["Avatar"];
-                        <a href="information.php"><img id="imager" onchange="chooseFile(this)" src="@Url.Content(imageURL)"></a>
+                        <a href=""><img id="imager" onchange="chooseFile(this)" src="@Url.Content(imageURL)"></a>
                     }
 
                 </span>
@@ -61,13 +61,13 @@
                 </li>
                 <ul class="menu-links">
                     <li class="nav-link">
-                        <a href="homeadmin.php">
+                        <a href="@Url.Action("Index","Home")">
                             <i class="fas fa-home icon"></i>
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="add.php">
+                        <a href="@Url.Action("Add", "Product")">
                             <i class="fas fa-plus icon"></i>
                             <span class="text nav-text">Add</span>
                         </a>

@@ -6,12 +6,12 @@
     </Key>
     <Property Name="ID_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="ID_customer" Type="int" />
   </EntityType>
@@ -68,8 +68,8 @@
     <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
     <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
@@ -130,6 +130,7 @@
     <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Total_price" Type="money" Nullable="false" />
     <Property Name="ID_order" Type="int" />
+    <Property Name="ID_service" Type="int" />
   </EntityType>
   <EntityType Name="Restaurant">
     <Key>
@@ -229,6 +230,13 @@
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Place_go" Type="varchar" MaxLength="100" />
+    <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Time_go" Type="varchar" MaxLength="100" />
+    <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Day_go" Type="varchar" MaxLength="100" />
+    <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Numberofpeople" Type="int" />
     <Property Name="Description" Type="varchar" MaxLength="1500" />
     <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
     <Property Name="ID_tour" Type="int" />
@@ -243,6 +251,13 @@
     <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Place_go" Type="varchar" MaxLength="100" />
+    <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Time_go" Type="varchar" MaxLength="100" />
+    <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Day_go" Type="varchar" MaxLength="100" />
+    <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Numberofpeople" Type="int" />
     <Property Name="Description" Type="varchar" MaxLength="1500" Nullable="false" />
     <Property Name="Note" Type="varchar" MaxLength="1550" Nullable="false" />
     <Property Name="Visa_support" Type="varchar" MaxLength="1000" Nullable="false" />
@@ -365,6 +380,18 @@
       </Principal>
       <Dependent Role="Orderdetails">
         <PropertyRef Name="ID_order" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_detail_id_ser">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="Orderdetails" Type="Self.Orderdetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="Orderdetails">
+        <PropertyRef Name="ID_service" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -628,6 +655,10 @@
     </AssociationSet>
     <AssociationSet Name="fk_detail_id_order" Association="Self.fk_detail_id_order">
       <End Role="Order" EntitySet="Order" />
+      <End Role="Orderdetails" EntitySet="Orderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_detail_id_ser" Association="Self.fk_detail_id_ser">
+      <End Role="Service" EntitySet="Service" />
       <End Role="Orderdetails" EntitySet="Orderdetails" />
     </AssociationSet>
     <AssociationSet Name="fk_hotel_id_ser" Association="Self.fk_hotel_id_ser">

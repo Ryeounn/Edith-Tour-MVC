@@ -13,5 +13,15 @@ namespace EdithTour.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Outside()
+        {
+            return View();
+        }
+
+        public ActionResult Inside()
+        {
+            return View();
+        }
     }
 }

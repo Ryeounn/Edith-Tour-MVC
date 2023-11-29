@@ -4,27 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="14f44c21815e4c84876029d309363f2b" Name="Diagram1">
-        <EntityTypeShape EntityType="EdithTourModel.Admin" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Airline" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Combo" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+      <Diagram DiagramId="16683f94eb8d47a9b838090218082776" Name="Diagram1">
+        <EntityTypeShape EntityType="EdithTourModel.Admin" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Airline" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Combo" Width="1.5" PointX="8.25" PointY="17.625" IsExpanded="true" />
         <EntityTypeShape EntityType="EdithTourModel.Contact" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Customer" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Customer_Level" Width="1.5" PointX="9.75" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Data_market" Width="1.5" PointX="12.75" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Hotel" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Customer" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Customer_Level" Width="1.5" PointX="9.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Data_market" Width="1.5" PointX="10.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Hotel" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EdithTourModel.Location" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Order" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Orderdetail" Width="1.5" PointX="9.75" PointY="17.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Restaurant" Width="1.5" PointX="3" PointY="19.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Room" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Schedule" Width="1.5" PointX="6" PointY="28.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Service" Width="1.5" PointX="0.75" PointY="15.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Ticket" Width="1.5" PointX="10.5" PointY="24" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Ticket_Combo" Width="1.5" PointX="7.5" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Tour" Width="1.5" PointX="3" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Order" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Orderdetail" Width="1.5" PointX="12.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Restaurant" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Room" Width="1.5" PointX="5.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Schedule" Width="1.5" PointX="3" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Ticket" Width="1.5" PointX="10.5" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Ticket_Combo" Width="1.5" PointX="10.5" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Tour" Width="1.5" PointX="3" PointY="25.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EdithTourModel.Tour_Inside" Width="1.5" PointX="5.25" PointY="24.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="EdithTourModel.Tour_Outside" Width="1.5" PointX="8.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EdithTourModel.Tour_Outside" Width="1.5" PointX="8.25" PointY="24.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EdithTourModel.Tourtrending" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="EdithTourModel.fk_cus_id_ad" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_order_id_ad" ManuallyRouted="false" />
@@ -44,6 +44,7 @@
         <AssociationConnector Association="EdithTourModel.fk_hotel_id_ser" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_type_room_id_hotel" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_detail_id_order" ManuallyRouted="false" />
+        <AssociationConnector Association="EdithTourModel.fk_detail_id_ser" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_res_id_ser" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_tour_id_sche" ManuallyRouted="false" />
         <AssociationConnector Association="EdithTourModel.fk_tour_id_schedule" ManuallyRouted="false" />
