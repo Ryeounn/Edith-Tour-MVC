@@ -18,7 +18,7 @@ namespace EdithTour.Models
         public string Name_ticket { get; set; }
         public string Payment_method { get; set; }
         public string Numberof_ticket { get; set; }
-        public decimal Total_price { get; set; }
+        public Nullable<decimal> Total_price { get; set; }
         public Nullable<int> ID_order { get; set; }
         public Nullable<int> ID_service { get; set; }
     

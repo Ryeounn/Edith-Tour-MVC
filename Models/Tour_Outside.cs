@@ -31,15 +31,18 @@ namespace EdithTour.Models
         public string Time_leave { get; set; }
         public string Day_go { get; set; }
         public string Day_leave { get; set; }
+        public string Visa_support { get; set; }
+        public string Country_Code { get; set; }
         public Nullable<int> Numberofpeople { get; set; }
         public string Description { get; set; }
+        public string Name_ticket { get; set; }
+        public Nullable<int> amount { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public string Note { get; set; }
-        public string Visa_support { get; set; }
-        public string Country_code { get; set; }
         public Nullable<int> ID_tour { get; set; }
-        public Nullable<int> ID_schedule { get; set; }
+        public Nullable<int> ID_ticket { get; set; }
     
-        public virtual Schedule Schedule { get; set; }
+        public virtual Ticket Ticket { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Tickets { get; set; }
         public virtual Tour Tour { get; set; }

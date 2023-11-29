@@ -24,7 +24,7 @@ namespace EdithTour.Models
         public string Name { get; set; }
         public string Res_Code { get; set; }
         public string Description { get; set; }
-        public System.TimeSpan Time_open { get; set; }
+        public Nullable<System.TimeSpan> Time_open { get; set; }
         public string Time_close { get; set; }
         public string Image { get; set; }
         public string Address { get; set; }

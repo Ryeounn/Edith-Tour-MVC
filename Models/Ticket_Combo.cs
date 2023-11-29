@@ -17,10 +17,10 @@ namespace EdithTour.Models
         public int ID_ticket { get; set; }
         public string Ticket_combo_code { get; set; }
         public string Name { get; set; }
-        public int Numberof_ticket { get; set; }
-        public int Ticket_leave { get; set; }
-        public int Remaining_ticket { get; set; }
-        public decimal Price { get; set; }
+        public Nullable<int> Numberof_ticket { get; set; }
+        public Nullable<int> Ticket_leave { get; set; }
+        public Nullable<int> Remaining_ticket { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public string Note { get; set; }
         public Nullable<int> ID_combo { get; set; }
     

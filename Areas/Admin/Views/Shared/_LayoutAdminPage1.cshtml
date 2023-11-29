@@ -1,6 +1,4 @@
-﻿@model EdithTour.Models.Admin
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -85,7 +83,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="orderadmin.php">
+                        <a href="@Url.Action("Users","Home")">
                             <i class="fas fa-users icon"></i>
                             <span class="text nav-text">User</span>
                         </a>
@@ -107,7 +105,7 @@
 
             <div class="bottom-content">
                 <li class="nav-link">
-                    <a onclick="" href="@Url.Action("Logout","Account")">
+                    <a onclick="" href="@Url.Action("Logout","Home")">
                         <i class="fas fa-sign-out-alt icon"></i>
                         <span class="text nav-text">Logout</span>
                     </a>

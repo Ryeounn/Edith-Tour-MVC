@@ -10,14 +10,14 @@
             <PropertyRef Name="ID_admin" />
           </Key>
           <Property Name="ID_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Avatar" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Avatar" Type="varchar" MaxLength="100" />
+          <Property Name="Birthday" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="Username" Type="varchar" MaxLength="250" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
           <Property Name="ID_customer" Type="int" />
         </EntityType>
         <EntityType Name="Airline">
@@ -25,18 +25,18 @@
             <PropertyRef Name="ID_airline" />
           </Key>
           <Property Name="ID_airline" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Air_Code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Place_go" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Place_leave" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Time_go" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Time_leave" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Day_go" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Day_leave" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Note" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Ticket" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Price" Type="money" Nullable="false" />
-          <Property Name="Note_ticket" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Air_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Place_go" Type="varchar" MaxLength="100" />
+          <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Time_go" Type="varchar" MaxLength="100" />
+          <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Day_go" Type="varchar" MaxLength="100" />
+          <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+          <Property Name="Ticket" Type="varchar" MaxLength="100" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Note_ticket" Type="varchar" MaxLength="255" />
           <Property Name="ID_service" Type="int" />
         </EntityType>
         <EntityType Name="Combo">
@@ -44,8 +44,8 @@
             <PropertyRef Name="ID_combo" />
           </Key>
           <Property Name="ID_combo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Combo_code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Combo_code" Type="varchar" MaxLength="8" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="ID_restaurant" Type="int" />
           <Property Name="ID_hotel" Type="int" />
           <Property Name="ID_airline" Type="int" />
@@ -57,25 +57,25 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="fullname" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="address" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="comment" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="fullname" Type="varchar" MaxLength="255" />
+          <Property Name="email" Type="varchar" MaxLength="255" />
+          <Property Name="phone" Type="varchar" MaxLength="255" />
+          <Property Name="address" Type="varchar" MaxLength="255" />
+          <Property Name="comment" Type="varchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="ID_customer" />
           </Key>
           <Property Name="ID_customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="Avatar" Type="varchar" MaxLength="100" />
-          <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Birthday" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="Username" Type="varchar" MaxLength="250" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
           <Property Name="ID_service" Type="int" />
         </EntityType>
         <EntityType Name="Customer_Level">
@@ -99,11 +99,11 @@
             <PropertyRef Name="ID_hotel" />
           </Key>
           <Property Name="ID_hotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Hotel_Code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Description" Type="varchar" MaxLength="2500" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Address" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Hotel_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Description" Type="varchar" MaxLength="2500" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="1000" />
           <Property Name="ID_service" Type="int" />
         </EntityType>
         <EntityType Name="Locations">
@@ -111,18 +111,19 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="locator" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="at" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="img" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="locator" Type="varchar" MaxLength="255" />
+          <Property Name="at" Type="varchar" MaxLength="255" />
+          <Property Name="img" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="ID_order" />
           </Key>
           <Property Name="ID_order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Cus_Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="service_name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Cus_Name" Type="varchar" MaxLength="100" />
+          <Property Name="service_name" Type="varchar" MaxLength="100" />
+          <Property Name="Order_date" Type="varchar" MaxLength="100" />
           <Property Name="ID_admin" Type="int" />
         </EntityType>
         <EntityType Name="Orderdetails">
@@ -130,10 +131,10 @@
             <PropertyRef Name="ID_orderdetails" />
           </Key>
           <Property Name="ID_orderdetails" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name_ticket" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Payment_method" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Total_price" Type="money" Nullable="false" />
+          <Property Name="Name_ticket" Type="varchar" MaxLength="100" />
+          <Property Name="Payment_method" Type="varchar" MaxLength="100" />
+          <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" />
+          <Property Name="Total_price" Type="money" />
           <Property Name="ID_order" Type="int" />
           <Property Name="ID_service" Type="int" />
         </EntityType>
@@ -142,14 +143,14 @@
             <PropertyRef Name="ID_restaurant" />
           </Key>
           <Property Name="ID_restaurant" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Res_Code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Description" Type="varchar" MaxLength="1600" Nullable="false" />
-          <Property Name="Time_open" Type="time" Precision="7" Nullable="false" />
-          <Property Name="Time_close" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Menu" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Res_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Description" Type="varchar" MaxLength="1600" />
+          <Property Name="Time_open" Type="time" Precision="7" />
+          <Property Name="Time_close" Type="varchar" MaxLength="10" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Menu" Type="varchar" MaxLength="255" />
           <Property Name="ID_service" Type="int" />
         </EntityType>
         <EntityType Name="Room">
@@ -157,31 +158,20 @@
             <PropertyRef Name="ID_room" />
           </Key>
           <Property Name="ID_room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Room_code" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Numberof_room" Type="int" Nullable="false" />
-          <Property Name="Evaluate" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Note" Type="varchar" MaxLength="1255" Nullable="false" />
+          <Property Name="Room_code" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Numberof_room" Type="int" />
+          <Property Name="Evaluate" Type="varchar" MaxLength="100" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Note" Type="varchar" MaxLength="1255" />
           <Property Name="ID_hotel" Type="int" />
-        </EntityType>
-        <EntityType Name="Schedule">
-          <Key>
-            <PropertyRef Name="ID_schedule" />
-          </Key>
-          <Property Name="ID_schedule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Start_time" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Day_begin" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="End_time" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="End_Day" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Activities" Type="nvarchar" MaxLength="1500" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
             <PropertyRef Name="ID_service" />
           </Key>
           <Property Name="ID_service" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="ID_admin" Type="int" />
         </EntityType>
         <EntityType Name="Ticket">
@@ -189,13 +179,13 @@
             <PropertyRef Name="ID_ticket" />
           </Key>
           <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Ticket_code" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="int" Nullable="false" />
-          <Property Name="Ticket_leave" Type="int" Nullable="false" />
-          <Property Name="Remaining_ticket" Type="int" Nullable="false" />
-          <Property Name="Price" Type="money" Nullable="false" />
-          <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Ticket_code" Type="varchar" MaxLength="10" />
+          <Property Name="Numberof_ticket" Type="int" />
+          <Property Name="Ticket_leave" Type="int" />
+          <Property Name="Remaining_ticket" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Note" Type="varchar" MaxLength="1500" />
           <Property Name="ID_tour_outside" Type="int" />
           <Property Name="ID_tour_inside" Type="int" />
         </EntityType>
@@ -204,13 +194,13 @@
             <PropertyRef Name="ID_ticket" />
           </Key>
           <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ticket_combo_code" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="int" Nullable="false" />
-          <Property Name="Ticket_leave" Type="int" Nullable="false" />
-          <Property Name="Remaining_ticket" Type="int" Nullable="false" />
-          <Property Name="Price" Type="money" Nullable="false" />
-          <Property Name="Note" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Ticket_combo_code" Type="varchar" MaxLength="100" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Numberof_ticket" Type="int" />
+          <Property Name="Ticket_leave" Type="int" />
+          <Property Name="Remaining_ticket" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Note" Type="varchar" MaxLength="100" />
           <Property Name="ID_combo" Type="int" />
         </EntityType>
         <EntityType Name="Tour">
@@ -218,23 +208,23 @@
             <PropertyRef Name="ID_tour" />
           </Key>
           <Property Name="ID_tour" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
           <Property Name="Tour_trending" Type="varchar" MaxLength="255" />
           <Property Name="ID_service" Type="int" />
-          <Property Name="Descrip" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Total" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Time" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="Img" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Descrip" Type="varchar" MaxLength="255" />
+          <Property Name="Total" Type="varchar" MaxLength="255" />
+          <Property Name="Time" Type="varchar" MaxLength="255" />
+          <Property Name="Img" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Tour_Inside">
           <Key>
             <PropertyRef Name="ID_tour_inside" />
           </Key>
           <Property Name="ID_tour_inside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="Tour_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Place" Type="varchar" MaxLength="1500" />
           <Property Name="Place_go" Type="varchar" MaxLength="100" />
           <Property Name="Place_leave" Type="varchar" MaxLength="100" />
           <Property Name="Time_go" Type="varchar" MaxLength="100" />
@@ -243,42 +233,48 @@
           <Property Name="Day_leave" Type="varchar" MaxLength="100" />
           <Property Name="Numberofpeople" Type="int" />
           <Property Name="Description" Type="varchar" MaxLength="1500" />
-          <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="Name_ticket" Type="varchar" MaxLength="250" />
+          <Property Name="amount" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Note" Type="varchar" MaxLength="1500" />
           <Property Name="ID_tour" Type="int" />
-          <Property Name="ID_schedule" Type="int" />
+          <Property Name="ID_ticket" Type="int" />
         </EntityType>
         <EntityType Name="Tour_Outside">
           <Key>
             <PropertyRef Name="ID_tour_outside" />
           </Key>
           <Property Name="ID_tour_outside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+          <Property Name="Tour_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Place" Type="varchar" MaxLength="1500" />
           <Property Name="Place_go" Type="varchar" MaxLength="100" />
           <Property Name="Place_leave" Type="varchar" MaxLength="100" />
           <Property Name="Time_go" Type="varchar" MaxLength="100" />
           <Property Name="Time_leave" Type="varchar" MaxLength="100" />
           <Property Name="Day_go" Type="varchar" MaxLength="100" />
           <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Visa_support" Type="varchar" MaxLength="255" />
+          <Property Name="Country_Code" Type="varchar" MaxLength="255" />
           <Property Name="Numberofpeople" Type="int" />
-          <Property Name="Description" Type="varchar" MaxLength="1500" Nullable="false" />
-          <Property Name="Note" Type="varchar" MaxLength="1550" Nullable="false" />
-          <Property Name="Visa_support" Type="varchar" MaxLength="1000" Nullable="false" />
-          <Property Name="Country_code" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="1500" />
+          <Property Name="Name_ticket" Type="varchar" MaxLength="250" />
+          <Property Name="amount" Type="int" />
+          <Property Name="Price" Type="money" />
+          <Property Name="Note" Type="varchar" MaxLength="1500" />
           <Property Name="ID_tour" Type="int" />
-          <Property Name="ID_schedule" Type="int" />
+          <Property Name="ID_ticket" Type="int" />
         </EntityType>
         <EntityType Name="Tourtrending">
           <Key>
             <PropertyRef Name="Tour_trending" />
           </Key>
           <Property Name="Tour_trending" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nametrend" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Total_tour" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Nametrend" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Image" Type="varchar" MaxLength="100" />
+          <Property Name="Total_tour" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="fk__id_list_ser">
           <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
@@ -412,6 +408,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_in_id_ticket">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="ID_ticket" />
+            </Principal>
+            <Dependent Role="Tour_Inside">
+              <PropertyRef Name="ID_ticket" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_list_id_air">
           <End Role="Airline" Type="Self.Airline" Multiplicity="0..1" />
           <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
@@ -472,6 +480,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_out_id_ticket">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="ID_ticket" />
+            </Principal>
+            <Dependent Role="Tour_Outside">
+              <PropertyRef Name="ID_ticket" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_res_id_ser">
           <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
           <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="*" />
@@ -529,30 +549,6 @@
             </Principal>
             <Dependent Role="Ticket">
               <PropertyRef Name="ID_tour_outside" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_tour_id_sche">
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Schedule">
-              <PropertyRef Name="ID_schedule" />
-            </Principal>
-            <Dependent Role="Tour_Outside">
-              <PropertyRef Name="ID_schedule" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_tour_id_schedule">
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Schedule">
-              <PropertyRef Name="ID_schedule" />
-            </Principal>
-            <Dependent Role="Tour_Inside">
-              <PropertyRef Name="ID_schedule" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -618,7 +614,6 @@
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" Schema="dbo" store:Type="Tables" />
@@ -670,6 +665,10 @@
             <End Role="Service" EntitySet="Service" />
             <End Role="Hotel" EntitySet="Hotel" />
           </AssociationSet>
+          <AssociationSet Name="fk_in_id_ticket" Association="Self.fk_in_id_ticket">
+            <End Role="Ticket" EntitySet="Ticket" />
+            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+          </AssociationSet>
           <AssociationSet Name="fk_list_id_air" Association="Self.fk_list_id_air">
             <End Role="Airline" EntitySet="Airline" />
             <End Role="Combo" EntitySet="Combo" />
@@ -690,6 +689,10 @@
             <End Role="Admin" EntitySet="Admin" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
+          <AssociationSet Name="fk_out_id_ticket" Association="Self.fk_out_id_ticket">
+            <End Role="Ticket" EntitySet="Ticket" />
+            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+          </AssociationSet>
           <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">
             <End Role="Service" EntitySet="Service" />
             <End Role="Restaurant" EntitySet="Restaurant" />
@@ -709,14 +712,6 @@
           <AssociationSet Name="fk_tk_id_tour_out" Association="Self.fk_tk_id_tour_out">
             <End Role="Tour_Outside" EntitySet="Tour_Outside" />
             <End Role="Ticket" EntitySet="Ticket" />
-          </AssociationSet>
-          <AssociationSet Name="fk_tour_id_sche" Association="Self.fk_tour_id_sche">
-            <End Role="Schedule" EntitySet="Schedule" />
-            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
-          </AssociationSet>
-          <AssociationSet Name="fk_tour_id_schedule" Association="Self.fk_tour_id_schedule">
-            <End Role="Schedule" EntitySet="Schedule" />
-            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
           </AssociationSet>
           <AssociationSet Name="fk_tour_id_ser" Association="Self.fk_tour_id_ser">
             <End Role="Service" EntitySet="Service" />
@@ -745,14 +740,14 @@
             <PropertyRef Name="ID_admin" />
           </Key>
           <Property Name="ID_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_customer" Type="Int32" />
           <NavigationProperty Name="Customer" Relationship="Self.fk_cus_id_ad" FromRole="Admin" ToRole="Customer" />
           <NavigationProperty Name="Orders" Relationship="Self.fk_order_id_ad" FromRole="Admin" ToRole="Order" />
@@ -763,18 +758,18 @@
             <PropertyRef Name="ID_airline" />
           </Key>
           <Property Name="ID_airline" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Air_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Note_ticket" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Air_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Note_ticket" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
           <NavigationProperty Name="Service" Relationship="Self.fk_air_id_ser" FromRole="Airline" ToRole="Service" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_air" FromRole="Airline" ToRole="Combo" />
@@ -784,8 +779,8 @@
             <PropertyRef Name="ID_combo" />
           </Key>
           <Property Name="ID_combo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Combo_code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Combo_code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_restaurant" Type="Int32" />
           <Property Name="ID_hotel" Type="Int32" />
           <Property Name="ID_airline" Type="Int32" />
@@ -803,25 +798,25 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fullname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="comment" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="ID_customer" />
           </Key>
           <Property Name="ID_customer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Birthday" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
           <NavigationProperty Name="Admins" Relationship="Self.fk_cus_id_ad" FromRole="Customer" ToRole="Admin" />
           <NavigationProperty Name="Service" Relationship="Self.fk_cus_id_ser" FromRole="Customer" ToRole="Service" />
@@ -852,11 +847,11 @@
             <PropertyRef Name="ID_hotel" />
           </Key>
           <Property Name="ID_hotel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Hotel_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Hotel_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_hotel" FromRole="Hotel" ToRole="Combo" />
           <NavigationProperty Name="Service" Relationship="Self.fk_hotel_id_ser" FromRole="Hotel" ToRole="Service" />
@@ -867,18 +862,19 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="locator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="at" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="locator" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="at" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="ID_order" />
           </Key>
           <Property Name="ID_order" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Cus_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="service_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cus_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="service_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Order_date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_admin" Type="Int32" />
           <NavigationProperty Name="Admin" Relationship="Self.fk_order_id_ad" FromRole="Order" ToRole="Admin" />
           <NavigationProperty Name="Customer_Level" Relationship="Self.fk_cuslevel_id_order" FromRole="Order" ToRole="Customer_Level" />
@@ -890,10 +886,10 @@
             <PropertyRef Name="ID_orderdetails" />
           </Key>
           <Property Name="ID_orderdetails" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name_ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Payment_method" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Total_price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="Name_ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Payment_method" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Numberof_ticket" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Total_price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ID_order" Type="Int32" />
           <Property Name="ID_service" Type="Int32" />
           <NavigationProperty Name="Order" Relationship="Self.fk_detail_id_order" FromRole="Orderdetails" ToRole="Order" />
@@ -904,14 +900,14 @@
             <PropertyRef Name="ID_restaurant" />
           </Key>
           <Property Name="ID_restaurant" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Res_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="1600" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Time_open" Type="Time" Nullable="false" Precision="7" />
-          <Property Name="Time_close" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Menu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Res_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="1600" FixedLength="false" Unicode="false" />
+          <Property Name="Time_open" Type="Time" Precision="7" />
+          <Property Name="Time_close" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Menu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_res" FromRole="Restaurant" ToRole="Combo" />
           <NavigationProperty Name="Service" Relationship="Self.fk_res_id_ser" FromRole="Restaurant" ToRole="Service" />
@@ -921,34 +917,21 @@
             <PropertyRef Name="ID_room" />
           </Key>
           <Property Name="ID_room" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Room_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Numberof_room" Type="Int32" Nullable="false" />
-          <Property Name="Evaluate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Note" Type="String" MaxLength="1255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Room_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Numberof_room" Type="Int32" />
+          <Property Name="Evaluate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="1255" FixedLength="false" Unicode="false" />
           <Property Name="ID_hotel" Type="Int32" />
           <NavigationProperty Name="Hotel" Relationship="Self.fk_type_room_id_hotel" FromRole="Room" ToRole="Hotel" />
-        </EntityType>
-        <EntityType Name="Schedule">
-          <Key>
-            <PropertyRef Name="ID_schedule" />
-          </Key>
-          <Property Name="ID_schedule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Start_time" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Day_begin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="End_time" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="End_Day" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Activities" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Tour_Outside" Relationship="Self.fk_tour_id_sche" FromRole="Schedule" ToRole="Tour_Outside" />
-          <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_tour_id_schedule" FromRole="Schedule" ToRole="Tour_Inside" />
         </EntityType>
         <EntityType Name="Service">
           <Key>
             <PropertyRef Name="ID_service" />
           </Key>
           <Property Name="ID_service" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_admin" Type="Int32" />
           <NavigationProperty Name="Admin" Relationship="Self.fk_ser_id_ad" FromRole="Service" ToRole="Admin" />
           <NavigationProperty Name="Airlines" Relationship="Self.fk_air_id_ser" FromRole="Service" ToRole="Airline" />
@@ -965,30 +948,32 @@
             <PropertyRef Name="ID_ticket" />
           </Key>
           <Property Name="ID_ticket" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Ticket_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="Int32" Nullable="false" />
-          <Property Name="Ticket_leave" Type="Int32" Nullable="false" />
-          <Property Name="Remaining_ticket" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ticket_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Numberof_ticket" Type="Int32" />
+          <Property Name="Ticket_leave" Type="Int32" />
+          <Property Name="Remaining_ticket" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="ID_tour_outside" Type="Int32" />
           <Property Name="ID_tour_inside" Type="Int32" />
-          <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_tk_id_tour_in" FromRole="Ticket" ToRole="Tour_Inside" />
-          <NavigationProperty Name="Tour_Outside" Relationship="Self.fk_tk_id_tour_out" FromRole="Ticket" ToRole="Tour_Outside" />
+          <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_in_id_ticket" FromRole="Ticket" ToRole="Tour_Inside" />
+          <NavigationProperty Name="Tour_Outside" Relationship="Self.fk_out_id_ticket" FromRole="Ticket" ToRole="Tour_Outside" />
+          <NavigationProperty Name="Tour_Inside1" Relationship="Self.fk_tk_id_tour_in" FromRole="Ticket" ToRole="Tour_Inside" />
+          <NavigationProperty Name="Tour_Outside1" Relationship="Self.fk_tk_id_tour_out" FromRole="Ticket" ToRole="Tour_Outside" />
         </EntityType>
         <EntityType Name="Ticket_Combo">
           <Key>
             <PropertyRef Name="ID_ticket" />
           </Key>
           <Property Name="ID_ticket" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ticket_combo_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Numberof_ticket" Type="Int32" Nullable="false" />
-          <Property Name="Ticket_leave" Type="Int32" Nullable="false" />
-          <Property Name="Remaining_ticket" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ticket_combo_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Numberof_ticket" Type="Int32" />
+          <Property Name="Ticket_leave" Type="Int32" />
+          <Property Name="Remaining_ticket" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_combo" Type="Int32" />
           <NavigationProperty Name="Combo" Relationship="Self.fk_tk_id_tour_combo" FromRole="Ticket_Combo" ToRole="Combo" />
         </EntityType>
@@ -997,13 +982,13 @@
             <PropertyRef Name="ID_tour" />
           </Key>
           <Property Name="ID_tour" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Tour_trending" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
-          <Property Name="Descrip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Total" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Time" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descrip" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Total" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Time" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk_list_id_tour" FromRole="Tour" ToRole="Combo" />
           <NavigationProperty Name="Service" Relationship="Self.fk_tour_id_ser" FromRole="Tour" ToRole="Service" />
           <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_tour_id_tour_out" FromRole="Tour" ToRole="Tour_Inside" />
@@ -1014,10 +999,10 @@
             <PropertyRef Name="ID_tour_inside" />
           </Key>
           <Property Name="ID_tour_inside" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tour_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tour_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
@@ -1026,10 +1011,13 @@
           <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Numberofpeople" Type="Int32" />
           <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
-          <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name_ticket" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="ID_tour" Type="Int32" />
-          <Property Name="ID_schedule" Type="Int32" />
-          <NavigationProperty Name="Schedule" Relationship="Self.fk_tour_id_schedule" FromRole="Tour_Inside" ToRole="Schedule" />
+          <Property Name="ID_ticket" Type="Int32" />
+          <NavigationProperty Name="Ticket" Relationship="Self.fk_in_id_ticket" FromRole="Tour_Inside" ToRole="Ticket" />
           <NavigationProperty Name="Tickets" Relationship="Self.fk_tk_id_tour_in" FromRole="Tour_Inside" ToRole="Ticket" />
           <NavigationProperty Name="Tour" Relationship="Self.fk_tour_id_tour_out" FromRole="Tour_Inside" ToRole="Tour" />
         </EntityType>
@@ -1038,24 +1026,27 @@
             <PropertyRef Name="ID_tour_outside" />
           </Key>
           <Property Name="ID_tour_outside" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Tour_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tour_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Place" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Visa_support" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Country_Code" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Numberofpeople" Type="Int32" />
-          <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Note" Type="String" MaxLength="1550" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Visa_support" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Country_code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="Name_ticket" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="amount" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="ID_tour" Type="Int32" />
-          <Property Name="ID_schedule" Type="Int32" />
-          <NavigationProperty Name="Schedule" Relationship="Self.fk_tour_id_sche" FromRole="Tour_Outside" ToRole="Schedule" />
+          <Property Name="ID_ticket" Type="Int32" />
+          <NavigationProperty Name="Ticket" Relationship="Self.fk_out_id_ticket" FromRole="Tour_Outside" ToRole="Ticket" />
           <NavigationProperty Name="Tickets" Relationship="Self.fk_tk_id_tour_out" FromRole="Tour_Outside" ToRole="Ticket" />
           <NavigationProperty Name="Tour" Relationship="Self.fk_tour_id_tourout" FromRole="Tour_Outside" ToRole="Tour" />
         </EntityType>
@@ -1064,10 +1055,10 @@
             <PropertyRef Name="Tour_trending" />
           </Key>
           <Property Name="Tour_trending" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nametrend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Total_tour" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nametrend" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Total_tour" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="fk_cus_id_ad">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
@@ -1309,30 +1300,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="fk_tour_id_sche">
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Schedule">
-              <PropertyRef Name="ID_schedule" />
-            </Principal>
-            <Dependent Role="Tour_Outside">
-              <PropertyRef Name="ID_schedule" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="fk_tour_id_schedule">
-          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Schedule">
-              <PropertyRef Name="ID_schedule" />
-            </Principal>
-            <Dependent Role="Tour_Inside">
-              <PropertyRef Name="ID_schedule" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="fk_tour_id_ser">
           <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
           <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
@@ -1342,6 +1309,30 @@
             </Principal>
             <Dependent Role="Tour">
               <PropertyRef Name="ID_service" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_in_id_ticket">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="ID_ticket" />
+            </Principal>
+            <Dependent Role="Tour_Inside">
+              <PropertyRef Name="ID_ticket" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_out_id_ticket">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="ID_ticket" />
+            </Principal>
+            <Dependent Role="Tour_Outside">
+              <PropertyRef Name="ID_ticket" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1407,7 +1398,6 @@
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetail" />
           <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
           <EntitySet Name="Rooms" EntityType="Self.Room" />
-          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
           <EntitySet Name="Services" EntityType="Self.Service" />
           <EntitySet Name="Tickets" EntityType="Self.Ticket" />
           <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" />
@@ -1495,17 +1485,17 @@
             <End Role="Service" EntitySet="Services" />
             <End Role="Restaurant" EntitySet="Restaurants" />
           </AssociationSet>
-          <AssociationSet Name="fk_tour_id_sche" Association="Self.fk_tour_id_sche">
-            <End Role="Schedule" EntitySet="Schedules" />
-            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
-          </AssociationSet>
-          <AssociationSet Name="fk_tour_id_schedule" Association="Self.fk_tour_id_schedule">
-            <End Role="Schedule" EntitySet="Schedules" />
-            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
-          </AssociationSet>
           <AssociationSet Name="fk_tour_id_ser" Association="Self.fk_tour_id_ser">
             <End Role="Service" EntitySet="Services" />
             <End Role="Tour" EntitySet="Tours" />
+          </AssociationSet>
+          <AssociationSet Name="fk_in_id_ticket" Association="Self.fk_in_id_ticket">
+            <End Role="Ticket" EntitySet="Tickets" />
+            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+          </AssociationSet>
+          <AssociationSet Name="fk_out_id_ticket" Association="Self.fk_out_id_ticket">
+            <End Role="Ticket" EntitySet="Tickets" />
+            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
           </AssociationSet>
           <AssociationSet Name="fk_tk_id_tour_in" Association="Self.fk_tk_id_tour_in">
             <End Role="Tour_Inside" EntitySet="Tour_Inside" />
@@ -1656,6 +1646,7 @@
                 <ScalarProperty Name="ID_order" ColumnName="ID_order" />
                 <ScalarProperty Name="Cus_Name" ColumnName="Cus_Name" />
                 <ScalarProperty Name="service_name" ColumnName="service_name" />
+                <ScalarProperty Name="Order_date" ColumnName="Order_date" />
                 <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1700,18 +1691,6 @@
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Schedules">
-            <EntityTypeMapping TypeName="EdithTourModel.Schedule">
-              <MappingFragment StoreEntitySet="Schedule">
-                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
-                <ScalarProperty Name="Start_time" ColumnName="Start_time" />
-                <ScalarProperty Name="Day_begin" ColumnName="Day_begin" />
-                <ScalarProperty Name="End_time" ColumnName="End_time" />
-                <ScalarProperty Name="End_Day" ColumnName="End_Day" />
-                <ScalarProperty Name="Activities" ColumnName="Activities" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1785,9 +1764,12 @@
                 <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
                 <ScalarProperty Name="Numberofpeople" ColumnName="Numberofpeople" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name_ticket" ColumnName="Name_ticket" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
-                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+                <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1805,13 +1787,16 @@
                 <ScalarProperty Name="Time_leave" ColumnName="Time_leave" />
                 <ScalarProperty Name="Day_go" ColumnName="Day_go" />
                 <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
+                <ScalarProperty Name="Visa_support" ColumnName="Visa_support" />
+                <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
                 <ScalarProperty Name="Numberofpeople" ColumnName="Numberofpeople" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name_ticket" ColumnName="Name_ticket" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
-                <ScalarProperty Name="Visa_support" ColumnName="Visa_support" />
-                <ScalarProperty Name="Country_code" ColumnName="Country_code" />
                 <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
-                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+                <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

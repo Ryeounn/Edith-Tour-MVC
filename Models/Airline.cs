@@ -31,7 +31,7 @@ namespace EdithTour.Models
         public string Day_leave { get; set; }
         public string Note { get; set; }
         public string Ticket { get; set; }
-        public decimal Price { get; set; }
+        public Nullable<decimal> Price { get; set; }
         public string Note_ticket { get; set; }
         public Nullable<int> ID_service { get; set; }
     

@@ -17,7 +17,7 @@ namespace EdithTour.Models
         public int ID_room { get; set; }
         public string Room_code { get; set; }
         public string Name { get; set; }
-        public int Numberof_room { get; set; }
+        public Nullable<int> Numberof_room { get; set; }
         public string Evaluate { get; set; }
         public string Image { get; set; }
         public string Note { get; set; }

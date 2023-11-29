@@ -25,6 +25,7 @@ namespace EdithTour.Models
         public int ID_order { get; set; }
         public string Cus_Name { get; set; }
         public string service_name { get; set; }
+        public string Order_date { get; set; }
         public Nullable<int> ID_admin { get; set; }
     
         public virtual Admin Admin { get; set; }

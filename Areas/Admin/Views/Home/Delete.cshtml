@@ -1,0 +1,19 @@
+﻿@model EdithTour.Models.Customer
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Product</h2>
+
+<form action="/Admin/Home/Delete/@Model.ID_customer" method="post">
+    <input type="hidden" name="id" value="@Model.ID_customer" />
+    <table class="table">
+        <tr>
+            <th>Customer Name</th>
+            <td>@Model.Name</td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="/Admin/Home/Users" class="btn btn-dark">Cancel</a>
+</form>
+

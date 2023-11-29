@@ -38,7 +38,6 @@ namespace EdithTour.Models
         public virtual DbSet<Orderdetail> Orderdetails { get; set; }
         public virtual DbSet<Restaurant> Restaurants { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
-        public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<Ticket> Tickets { get; set; }
         public virtual DbSet<Ticket_Combo> Ticket_Combo { get; set; }

@@ -1,0 +1,51 @@
+﻿@model List<EdithTour.Models.Customer>
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminPage1.cshtml";
+}
+
+<div class="text">User</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/Admin/Home/Users" class="form-search" method="post">
+                <input type="text" name="search" class="form-control txtSearch" value="@ViewBag.Search"/>
+                <input type="submit" class="btn btn-primary mx-1" value="SEARCH"/>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="loader">
+                <table class="table table-bordered table-striped mt-3">
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Birthday</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><img class="img--user" src="~/Images/@item.Avatar" /></td>
+                            <td>@item.Name</td>
+                            <td>@item.Username</td>
+                            <td>@item.Birthday</td>
+                            <td>@item.Email</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Address</td>
+                            <td><a href="/Admin/Home/Edit/@item.ID_customer" class="btn btn-warning">Edit</a></td>
+                            <td><a href="/Admin/Home/Delete/@item.ID_customer" class="btn btn-danger">Remove</a></td>
+
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
