@@ -127,6 +127,7 @@
           <ScalarProperty Name="ID_order" ColumnName="ID_order" />
           <ScalarProperty Name="Cus_Name" ColumnName="Cus_Name" />
           <ScalarProperty Name="service_name" ColumnName="service_name" />
+          <ScalarProperty Name="Order_date" ColumnName="Order_date" />
           <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -171,18 +172,6 @@
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="ID_hotel" ColumnName="ID_hotel" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Schedules">
-      <EntityTypeMapping TypeName="EdithTourModel.Schedule">
-        <MappingFragment StoreEntitySet="Schedule">
-          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
-          <ScalarProperty Name="Start_time" ColumnName="Start_time" />
-          <ScalarProperty Name="Day_begin" ColumnName="Day_begin" />
-          <ScalarProperty Name="End_time" ColumnName="End_time" />
-          <ScalarProperty Name="End_Day" ColumnName="End_Day" />
-          <ScalarProperty Name="Activities" ColumnName="Activities" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -256,9 +245,12 @@
           <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
           <ScalarProperty Name="Numberofpeople" ColumnName="Numberofpeople" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name_ticket" ColumnName="Name_ticket" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
-          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+          <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -276,13 +268,16 @@
           <ScalarProperty Name="Time_leave" ColumnName="Time_leave" />
           <ScalarProperty Name="Day_go" ColumnName="Day_go" />
           <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
+          <ScalarProperty Name="Visa_support" ColumnName="Visa_support" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
           <ScalarProperty Name="Numberofpeople" ColumnName="Numberofpeople" />
           <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name_ticket" ColumnName="Name_ticket" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Note" ColumnName="Note" />
-          <ScalarProperty Name="Visa_support" ColumnName="Visa_support" />
-          <ScalarProperty Name="Country_code" ColumnName="Country_code" />
           <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
-          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+          <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

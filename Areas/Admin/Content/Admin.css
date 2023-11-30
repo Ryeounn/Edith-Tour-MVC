@@ -381,3 +381,19 @@ th,td{
 .form-search{
     float: right;
 }
+
+/*Users*/
+.img-user-edit{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 2em 0 0 50%;
+}
+
+.input-avt{
+    margin: 2em 0 0 50%;
+}
+
+.note-avt {
+    margin: 1em 0 0 50%;
+}

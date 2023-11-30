@@ -5,14 +5,14 @@
       <PropertyRef Name="ID_admin" />
     </Key>
     <Property Name="ID_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Avatar" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="Birthday" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="Username" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
     <Property Name="ID_customer" Type="int" />
   </EntityType>
   <EntityType Name="Airline">
@@ -20,18 +20,18 @@
       <PropertyRef Name="ID_airline" />
     </Key>
     <Property Name="ID_airline" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Air_Code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Place_go" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Place_leave" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Time_go" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Time_leave" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Day_go" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Day_leave" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Note" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Ticket" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Price" Type="money" Nullable="false" />
-    <Property Name="Note_ticket" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Air_Code" Type="varchar" MaxLength="8" />
+    <Property Name="Place_go" Type="varchar" MaxLength="100" />
+    <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Time_go" Type="varchar" MaxLength="100" />
+    <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Day_go" Type="varchar" MaxLength="100" />
+    <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+    <Property Name="Ticket" Type="varchar" MaxLength="100" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Note_ticket" Type="varchar" MaxLength="255" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
   <EntityType Name="Combo">
@@ -39,8 +39,8 @@
       <PropertyRef Name="ID_combo" />
     </Key>
     <Property Name="ID_combo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Combo_code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Combo_code" Type="varchar" MaxLength="8" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="ID_restaurant" Type="int" />
     <Property Name="ID_hotel" Type="int" />
     <Property Name="ID_airline" Type="int" />
@@ -52,25 +52,25 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="fullname" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="phone" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="address" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="comment" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="fullname" Type="varchar" MaxLength="255" />
+    <Property Name="email" Type="varchar" MaxLength="255" />
+    <Property Name="phone" Type="varchar" MaxLength="255" />
+    <Property Name="address" Type="varchar" MaxLength="255" />
+    <Property Name="comment" Type="varchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="Customer">
     <Key>
       <PropertyRef Name="ID_customer" />
     </Key>
     <Property Name="ID_customer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="Avatar" Type="varchar" MaxLength="100" />
-    <Property Name="Birthday" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Phone" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Username" Type="varchar" MaxLength="250" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Birthday" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="Username" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
   <EntityType Name="Customer_Level">
@@ -94,11 +94,11 @@
       <PropertyRef Name="ID_hotel" />
     </Key>
     <Property Name="ID_hotel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Hotel_Code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Description" Type="varchar" MaxLength="2500" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Hotel_Code" Type="varchar" MaxLength="8" />
+    <Property Name="Description" Type="varchar" MaxLength="2500" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
   <EntityType Name="Locations">
@@ -106,18 +106,19 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="locator" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="at" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="img" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="locator" Type="varchar" MaxLength="255" />
+    <Property Name="at" Type="varchar" MaxLength="255" />
+    <Property Name="img" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="ID_order" />
     </Key>
     <Property Name="ID_order" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Cus_Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="service_name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Cus_Name" Type="varchar" MaxLength="100" />
+    <Property Name="service_name" Type="varchar" MaxLength="100" />
+    <Property Name="Order_date" Type="varchar" MaxLength="100" />
     <Property Name="ID_admin" Type="int" />
   </EntityType>
   <EntityType Name="Orderdetails">
@@ -125,10 +126,10 @@
       <PropertyRef Name="ID_orderdetails" />
     </Key>
     <Property Name="ID_orderdetails" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name_ticket" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Payment_method" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Total_price" Type="money" Nullable="false" />
+    <Property Name="Name_ticket" Type="varchar" MaxLength="100" />
+    <Property Name="Payment_method" Type="varchar" MaxLength="100" />
+    <Property Name="Numberof_ticket" Type="varchar" MaxLength="100" />
+    <Property Name="Total_price" Type="money" />
     <Property Name="ID_order" Type="int" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
@@ -137,14 +138,14 @@
       <PropertyRef Name="ID_restaurant" />
     </Key>
     <Property Name="ID_restaurant" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Res_Code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Description" Type="varchar" MaxLength="1600" Nullable="false" />
-    <Property Name="Time_open" Type="time" Precision="7" Nullable="false" />
-    <Property Name="Time_close" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Menu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Res_Code" Type="varchar" MaxLength="8" />
+    <Property Name="Description" Type="varchar" MaxLength="1600" />
+    <Property Name="Time_open" Type="time" Precision="7" />
+    <Property Name="Time_close" Type="varchar" MaxLength="10" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Menu" Type="varchar" MaxLength="255" />
     <Property Name="ID_service" Type="int" />
   </EntityType>
   <EntityType Name="Room">
@@ -152,31 +153,20 @@
       <PropertyRef Name="ID_room" />
     </Key>
     <Property Name="ID_room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Room_code" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Numberof_room" Type="int" Nullable="false" />
-    <Property Name="Evaluate" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Note" Type="varchar" MaxLength="1255" Nullable="false" />
+    <Property Name="Room_code" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Numberof_room" Type="int" />
+    <Property Name="Evaluate" Type="varchar" MaxLength="100" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Note" Type="varchar" MaxLength="1255" />
     <Property Name="ID_hotel" Type="int" />
-  </EntityType>
-  <EntityType Name="Schedule">
-    <Key>
-      <PropertyRef Name="ID_schedule" />
-    </Key>
-    <Property Name="ID_schedule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Start_time" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Day_begin" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="End_time" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="End_Day" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="Activities" Type="nvarchar" MaxLength="1500" />
   </EntityType>
   <EntityType Name="Service">
     <Key>
       <PropertyRef Name="ID_service" />
     </Key>
     <Property Name="ID_service" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="ID_admin" Type="int" />
   </EntityType>
   <EntityType Name="Ticket">
@@ -184,13 +174,13 @@
       <PropertyRef Name="ID_ticket" />
     </Key>
     <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Ticket_code" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Numberof_ticket" Type="int" Nullable="false" />
-    <Property Name="Ticket_leave" Type="int" Nullable="false" />
-    <Property Name="Remaining_ticket" Type="int" Nullable="false" />
-    <Property Name="Price" Type="money" Nullable="false" />
-    <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Ticket_code" Type="varchar" MaxLength="10" />
+    <Property Name="Numberof_ticket" Type="int" />
+    <Property Name="Ticket_leave" Type="int" />
+    <Property Name="Remaining_ticket" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" />
     <Property Name="ID_tour_outside" Type="int" />
     <Property Name="ID_tour_inside" Type="int" />
   </EntityType>
@@ -199,13 +189,13 @@
       <PropertyRef Name="ID_ticket" />
     </Key>
     <Property Name="ID_ticket" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ticket_combo_code" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Numberof_ticket" Type="int" Nullable="false" />
-    <Property Name="Ticket_leave" Type="int" Nullable="false" />
-    <Property Name="Remaining_ticket" Type="int" Nullable="false" />
-    <Property Name="Price" Type="money" Nullable="false" />
-    <Property Name="Note" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ticket_combo_code" Type="varchar" MaxLength="100" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Numberof_ticket" Type="int" />
+    <Property Name="Ticket_leave" Type="int" />
+    <Property Name="Remaining_ticket" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Note" Type="varchar" MaxLength="100" />
     <Property Name="ID_combo" Type="int" />
   </EntityType>
   <EntityType Name="Tour">
@@ -213,23 +203,23 @@
       <PropertyRef Name="ID_tour" />
     </Key>
     <Property Name="ID_tour" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
     <Property Name="Tour_trending" Type="varchar" MaxLength="255" />
     <Property Name="ID_service" Type="int" />
-    <Property Name="Descrip" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Total" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Time" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Img" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Descrip" Type="varchar" MaxLength="255" />
+    <Property Name="Total" Type="varchar" MaxLength="255" />
+    <Property Name="Time" Type="varchar" MaxLength="255" />
+    <Property Name="Img" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Tour_Inside">
     <Key>
       <PropertyRef Name="ID_tour_inside" />
     </Key>
     <Property Name="ID_tour_inside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Tour_Code" Type="varchar" MaxLength="8" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Place" Type="varchar" MaxLength="1500" />
     <Property Name="Place_go" Type="varchar" MaxLength="100" />
     <Property Name="Place_leave" Type="varchar" MaxLength="100" />
     <Property Name="Time_go" Type="varchar" MaxLength="100" />
@@ -238,42 +228,48 @@
     <Property Name="Day_leave" Type="varchar" MaxLength="100" />
     <Property Name="Numberofpeople" Type="int" />
     <Property Name="Description" Type="varchar" MaxLength="1500" />
-    <Property Name="Note" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Name_ticket" Type="varchar" MaxLength="250" />
+    <Property Name="amount" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" />
     <Property Name="ID_tour" Type="int" />
-    <Property Name="ID_schedule" Type="int" />
+    <Property Name="ID_ticket" Type="int" />
   </EntityType>
   <EntityType Name="Tour_Outside">
     <Key>
       <PropertyRef Name="ID_tour_outside" />
     </Key>
     <Property Name="ID_tour_outside" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Tour_Code" Type="varchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Place" Type="varchar" MaxLength="1500" Nullable="false" />
+    <Property Name="Tour_Code" Type="varchar" MaxLength="8" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Place" Type="varchar" MaxLength="1500" />
     <Property Name="Place_go" Type="varchar" MaxLength="100" />
     <Property Name="Place_leave" Type="varchar" MaxLength="100" />
     <Property Name="Time_go" Type="varchar" MaxLength="100" />
     <Property Name="Time_leave" Type="varchar" MaxLength="100" />
     <Property Name="Day_go" Type="varchar" MaxLength="100" />
     <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Visa_support" Type="varchar" MaxLength="255" />
+    <Property Name="Country_Code" Type="varchar" MaxLength="255" />
     <Property Name="Numberofpeople" Type="int" />
-    <Property Name="Description" Type="varchar" MaxLength="1500" Nullable="false" />
-    <Property Name="Note" Type="varchar" MaxLength="1550" Nullable="false" />
-    <Property Name="Visa_support" Type="varchar" MaxLength="1000" Nullable="false" />
-    <Property Name="Country_code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="1500" />
+    <Property Name="Name_ticket" Type="varchar" MaxLength="250" />
+    <Property Name="amount" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" />
     <Property Name="ID_tour" Type="int" />
-    <Property Name="ID_schedule" Type="int" />
+    <Property Name="ID_ticket" Type="int" />
   </EntityType>
   <EntityType Name="Tourtrending">
     <Key>
       <PropertyRef Name="Tour_trending" />
     </Key>
     <Property Name="Tour_trending" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Nametrend" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Image" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Total_tour" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Nametrend" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Image" Type="varchar" MaxLength="100" />
+    <Property Name="Total_tour" Type="varchar" MaxLength="100" />
   </EntityType>
   <Association Name="fk__id_list_ser">
     <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
@@ -407,6 +403,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_in_id_ticket">
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="ID_ticket" />
+      </Principal>
+      <Dependent Role="Tour_Inside">
+        <PropertyRef Name="ID_ticket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_list_id_air">
     <End Role="Airline" Type="Self.Airline" Multiplicity="0..1" />
     <End Role="Combo" Type="Self.Combo" Multiplicity="*" />
@@ -467,6 +475,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_out_id_ticket">
+    <End Role="Ticket" Type="Self.Ticket" Multiplicity="0..1" />
+    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ticket">
+        <PropertyRef Name="ID_ticket" />
+      </Principal>
+      <Dependent Role="Tour_Outside">
+        <PropertyRef Name="ID_ticket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_res_id_ser">
     <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
     <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="*" />
@@ -524,30 +544,6 @@
       </Principal>
       <Dependent Role="Ticket">
         <PropertyRef Name="ID_tour_outside" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_tour_id_sche">
-    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Schedule">
-        <PropertyRef Name="ID_schedule" />
-      </Principal>
-      <Dependent Role="Tour_Outside">
-        <PropertyRef Name="ID_schedule" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_tour_id_schedule">
-    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
-    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Schedule">
-        <PropertyRef Name="ID_schedule" />
-      </Principal>
-      <Dependent Role="Tour_Inside">
-        <PropertyRef Name="ID_schedule" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -613,7 +609,6 @@
     <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" Schema="dbo" store:Type="Tables" />
@@ -665,6 +660,10 @@
       <End Role="Service" EntitySet="Service" />
       <End Role="Hotel" EntitySet="Hotel" />
     </AssociationSet>
+    <AssociationSet Name="fk_in_id_ticket" Association="Self.fk_in_id_ticket">
+      <End Role="Ticket" EntitySet="Ticket" />
+      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+    </AssociationSet>
     <AssociationSet Name="fk_list_id_air" Association="Self.fk_list_id_air">
       <End Role="Airline" EntitySet="Airline" />
       <End Role="Combo" EntitySet="Combo" />
@@ -685,6 +684,10 @@
       <End Role="Admin" EntitySet="Admin" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
+    <AssociationSet Name="fk_out_id_ticket" Association="Self.fk_out_id_ticket">
+      <End Role="Ticket" EntitySet="Ticket" />
+      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+    </AssociationSet>
     <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">
       <End Role="Service" EntitySet="Service" />
       <End Role="Restaurant" EntitySet="Restaurant" />
@@ -704,14 +707,6 @@
     <AssociationSet Name="fk_tk_id_tour_out" Association="Self.fk_tk_id_tour_out">
       <End Role="Tour_Outside" EntitySet="Tour_Outside" />
       <End Role="Ticket" EntitySet="Ticket" />
-    </AssociationSet>
-    <AssociationSet Name="fk_tour_id_sche" Association="Self.fk_tour_id_sche">
-      <End Role="Schedule" EntitySet="Schedule" />
-      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
-    </AssociationSet>
-    <AssociationSet Name="fk_tour_id_schedule" Association="Self.fk_tour_id_schedule">
-      <End Role="Schedule" EntitySet="Schedule" />
-      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
     </AssociationSet>
     <AssociationSet Name="fk_tour_id_ser" Association="Self.fk_tour_id_ser">
       <End Role="Service" EntitySet="Service" />

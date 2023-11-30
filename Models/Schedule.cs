@@ -12,39 +12,26 @@ namespace EdithTour.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tour_Inside
+    public partial class Schedule
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Tour_Inside()
+        public Schedule()
         {
-            this.Tickets = new HashSet<Ticket>();
+            this.Tour_Inside = new HashSet<Tour_Inside>();
+            this.Tour_Outside = new HashSet<Tour_Outside>();
         }
     
-        public int ID_tour_inside { get; set; }
-        public string Tour_Code { get; set; }
-        public string Name { get; set; }
-        public string Image { get; set; }
-        public string Place { get; set; }
+        public int ID_schedule { get; set; }
         public string Place_go { get; set; }
         public string Place_leave { get; set; }
         public string Time_go { get; set; }
         public string Time_leave { get; set; }
         public string Day_go { get; set; }
         public string Day_leave { get; set; }
-        public Nullable<int> Numberofpeople { get; set; }
-        public string Description { get; set; }
-        public string Name_ticket { get; set; }
-        public Nullable<int> amount { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public string Note { get; set; }
-        public Nullable<int> ID_tour { get; set; }
-        public Nullable<int> ID_schedule { get; set; }
-        public Nullable<int> ID_ticket { get; set; }
     
-        public virtual Schedule Schedule { get; set; }
-        public virtual Ticket Ticket { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ticket> Tickets { get; set; }
-        public virtual Tour Tour { get; set; }
+        public virtual ICollection<Tour_Inside> Tour_Inside { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tour_Outside> Tour_Outside { get; set; }
     }
 }

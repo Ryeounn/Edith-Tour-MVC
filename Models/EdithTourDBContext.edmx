@@ -166,6 +166,18 @@
           <Property Name="Note" Type="varchar" MaxLength="1255" />
           <Property Name="ID_hotel" Type="int" />
         </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ID_schedule" />
+          </Key>
+          <Property Name="ID_schedule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Place_go" Type="varchar" MaxLength="100" />
+          <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Time_go" Type="varchar" MaxLength="100" />
+          <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+          <Property Name="Day_go" Type="varchar" MaxLength="100" />
+          <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="Service">
           <Key>
             <PropertyRef Name="ID_service" />
@@ -238,6 +250,7 @@
           <Property Name="Price" Type="money" />
           <Property Name="Note" Type="varchar" MaxLength="1500" />
           <Property Name="ID_tour" Type="int" />
+          <Property Name="ID_schedule" Type="int" />
           <Property Name="ID_ticket" Type="int" />
         </EntityType>
         <EntityType Name="Tour_Outside">
@@ -264,6 +277,7 @@
           <Property Name="Price" Type="money" />
           <Property Name="Note" Type="varchar" MaxLength="1500" />
           <Property Name="ID_tour" Type="int" />
+          <Property Name="ID_schedule" Type="int" />
           <Property Name="ID_ticket" Type="int" />
         </EntityType>
         <EntityType Name="Tourtrending">
@@ -504,6 +518,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_schedule_id_in">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="ID_schedule" />
+            </Principal>
+            <Dependent Role="Tour_Inside">
+              <PropertyRef Name="ID_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_schedule_id_out">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="ID_schedule" />
+            </Principal>
+            <Dependent Role="Tour_Outside">
+              <PropertyRef Name="ID_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_ser_id_ad">
           <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
           <End Role="Service" Type="Self.Service" Multiplicity="*" />
@@ -614,6 +652,7 @@
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" Schema="dbo" store:Type="Tables" />
@@ -696,6 +735,14 @@
           <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">
             <End Role="Service" EntitySet="Service" />
             <End Role="Restaurant" EntitySet="Restaurant" />
+          </AssociationSet>
+          <AssociationSet Name="fk_schedule_id_in" Association="Self.fk_schedule_id_in">
+            <End Role="Schedule" EntitySet="Schedule" />
+            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+          </AssociationSet>
+          <AssociationSet Name="fk_schedule_id_out" Association="Self.fk_schedule_id_out">
+            <End Role="Schedule" EntitySet="Schedule" />
+            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
           </AssociationSet>
           <AssociationSet Name="fk_ser_id_ad" Association="Self.fk_ser_id_ad">
             <End Role="Admin" EntitySet="Admin" />
@@ -926,6 +973,20 @@
           <Property Name="ID_hotel" Type="Int32" />
           <NavigationProperty Name="Hotel" Relationship="Self.fk_type_room_id_hotel" FromRole="Room" ToRole="Hotel" />
         </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ID_schedule" />
+          </Key>
+          <Property Name="ID_schedule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Place_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Place_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Time_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Time_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Day_go" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Day_leave" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Tour_Inside" Relationship="Self.fk_schedule_id_in" FromRole="Schedule" ToRole="Tour_Inside" />
+          <NavigationProperty Name="Tour_Outside" Relationship="Self.fk_schedule_id_out" FromRole="Schedule" ToRole="Tour_Outside" />
+        </EntityType>
         <EntityType Name="Service">
           <Key>
             <PropertyRef Name="ID_service" />
@@ -1016,7 +1077,9 @@
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="ID_tour" Type="Int32" />
+          <Property Name="ID_schedule" Type="Int32" />
           <Property Name="ID_ticket" Type="Int32" />
+          <NavigationProperty Name="Schedule" Relationship="Self.fk_schedule_id_in" FromRole="Tour_Inside" ToRole="Schedule" />
           <NavigationProperty Name="Ticket" Relationship="Self.fk_in_id_ticket" FromRole="Tour_Inside" ToRole="Ticket" />
           <NavigationProperty Name="Tickets" Relationship="Self.fk_tk_id_tour_in" FromRole="Tour_Inside" ToRole="Ticket" />
           <NavigationProperty Name="Tour" Relationship="Self.fk_tour_id_tour_out" FromRole="Tour_Inside" ToRole="Tour" />
@@ -1045,7 +1108,9 @@
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="Note" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
           <Property Name="ID_tour" Type="Int32" />
+          <Property Name="ID_schedule" Type="Int32" />
           <Property Name="ID_ticket" Type="Int32" />
+          <NavigationProperty Name="Schedule" Relationship="Self.fk_schedule_id_out" FromRole="Tour_Outside" ToRole="Schedule" />
           <NavigationProperty Name="Ticket" Relationship="Self.fk_out_id_ticket" FromRole="Tour_Outside" ToRole="Ticket" />
           <NavigationProperty Name="Tickets" Relationship="Self.fk_tk_id_tour_out" FromRole="Tour_Outside" ToRole="Ticket" />
           <NavigationProperty Name="Tour" Relationship="Self.fk_tour_id_tourout" FromRole="Tour_Outside" ToRole="Tour" />
@@ -1300,6 +1365,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_schedule_id_in">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+          <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="ID_schedule" />
+            </Principal>
+            <Dependent Role="Tour_Inside">
+              <PropertyRef Name="ID_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_schedule_id_out">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+          <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="ID_schedule" />
+            </Principal>
+            <Dependent Role="Tour_Outside">
+              <PropertyRef Name="ID_schedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="fk_tour_id_ser">
           <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
           <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
@@ -1398,6 +1487,7 @@
           <EntitySet Name="Orderdetails" EntityType="Self.Orderdetail" />
           <EntitySet Name="Restaurants" EntityType="Self.Restaurant" />
           <EntitySet Name="Rooms" EntityType="Self.Room" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
           <EntitySet Name="Services" EntityType="Self.Service" />
           <EntitySet Name="Tickets" EntityType="Self.Ticket" />
           <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" />
@@ -1484,6 +1574,14 @@
           <AssociationSet Name="fk_res_id_ser" Association="Self.fk_res_id_ser">
             <End Role="Service" EntitySet="Services" />
             <End Role="Restaurant" EntitySet="Restaurants" />
+          </AssociationSet>
+          <AssociationSet Name="fk_schedule_id_in" Association="Self.fk_schedule_id_in">
+            <End Role="Schedule" EntitySet="Schedules" />
+            <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+          </AssociationSet>
+          <AssociationSet Name="fk_schedule_id_out" Association="Self.fk_schedule_id_out">
+            <End Role="Schedule" EntitySet="Schedules" />
+            <End Role="Tour_Outside" EntitySet="Tour_Outside" />
           </AssociationSet>
           <AssociationSet Name="fk_tour_id_ser" Association="Self.fk_tour_id_ser">
             <End Role="Service" EntitySet="Services" />
@@ -1694,6 +1792,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="EdithTourModel.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+                <ScalarProperty Name="Place_go" ColumnName="Place_go" />
+                <ScalarProperty Name="Place_leave" ColumnName="Place_leave" />
+                <ScalarProperty Name="Time_go" ColumnName="Time_go" />
+                <ScalarProperty Name="Time_leave" ColumnName="Time_leave" />
+                <ScalarProperty Name="Day_go" ColumnName="Day_go" />
+                <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Services">
             <EntityTypeMapping TypeName="EdithTourModel.Service">
               <MappingFragment StoreEntitySet="Service">
@@ -1769,6 +1880,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
                 <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1796,6 +1908,7 @@
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
                 <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+                <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
                 <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
               </MappingFragment>
             </EntityTypeMapping>

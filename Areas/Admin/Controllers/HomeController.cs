@@ -29,7 +29,19 @@ namespace EdithTour.Areas.Admin.Controllers
             return View(customers);
         }
 
-        public ActionResult Edit() { 
+        public ActionResult Edit(int id) {
+            Customer cus = db.Customers.Where(row => row.ID_customer == id).FirstOrDefault();
+            return View(cus);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Customer customer, int ID_customer)
+        {
+            Customer customers = db.Customers.Where(row => row.ID_customer == ID_customer).FirstOrDefault();
+            if(customers != null)
+            {
+
+            }
             return View();
         }
 

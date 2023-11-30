@@ -1,0 +1,48 @@
+﻿@model EdithTour.Models.Customer
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminPage1.cshtml";
+}
+<div class="text">Edit User</div>
+<div class="container">
+    @using (Html.BeginForm("Edit", "Home", FormMethod.Post, new { enctype = "multipart/form-data"}))
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="" hidden></label>
+                    <input type="text" class="form-control" value="@Model.ID_customer" hidden name="id_customers">
+                </div>
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control" value="@Model.Username" name="username" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" value="@Model.Name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" value="@Model.Email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control" value="@Model.Phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="">Birthday</label>
+                    <input type="text" class="form-control" value="@Model.Birthday" name="birthday">
+                </div>
+                <div class="form-group">
+                    <label for="">Address</label>
+                    <input type="text" class="form-control" value="@Model.Address" name="address">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Images/@Model.Avatar" class="img-user-edit">
+                <input type="file" name="uploadfile" class="input-avt" accept=".jpg, .jpeg, .gif, .png"/>
+                <p class="note-avt">Accept file .JPG, .JPEG, .PNG</p>
+            </div>
+        </div>
+    }
+</div>
