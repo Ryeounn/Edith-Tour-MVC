@@ -5,7 +5,7 @@
 <form action="/Account/General" method="post" enctype="multipart/form-data">
     <div class="card-body media align-items-center">
         @{
-            string imageURL = "~\\Images\\" + Model.Avatar;
+            string imageURL = "~\\Images\\Users\\" + Model.Avatar;
             <img src="@Url.Content(imageURL)" id="image" alt=""
                  class="d-block">
         }

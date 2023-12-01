@@ -25,7 +25,7 @@ namespace EdithTour.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Administrator> Administrators { get; set; }
         public virtual DbSet<Airline> Airlines { get; set; }
         public virtual DbSet<Combo> Comboes { get; set; }
         public virtual DbSet<Contact> Contacts { get; set; }

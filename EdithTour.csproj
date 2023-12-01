@@ -369,11 +369,13 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_LayoutAdminPage1.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Add.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Outside.cshtml" />
-    <Content Include="Areas\Admin\Views\Product\Inside.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Outside.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Inside.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Users.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Information.cshtml" />
     <EntityDeploy Include="Models\EdithTourDBContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EdithTourDBContext.Designer.cs</LastGenOutput>
@@ -381,7 +383,11 @@
     <Content Include="Models\EdithTourDBContext.edmx.diagram">
       <DependentUpon>EdithTourDBContext.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\Home\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Trending.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Customer.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Admin.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Restaurant.cshtml" />
+    <Content Include="Areas\Admin\Views\Add\Hotel.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -391,13 +397,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Admin.cs">
+    <Compile Include="Models\Administrator.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Airline.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
-    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AddController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -455,6 +461,9 @@
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Room.cs">
+      <DependentUpon>EdithTourDBContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Schedule.cs">
       <DependentUpon>EdithTourDBContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Service.cs">
@@ -554,7 +563,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Images\" />
+    <Folder Include="Images\Admin\" />
+    <Folder Include="Images\Product\" />
+    <Folder Include="Images\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

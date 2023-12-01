@@ -35,13 +35,13 @@ namespace EdithTour.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string username, string password, Customer customer, Admin admin)
+        public ActionResult Login(string username, string password, Customer customer, Administrator administrator)
         {
             if (ModelState.IsValid)
             {
                 var f_password = GetMD5(password);
                 var data_cus = db.Customers.Where(s => s.Username == customer.Username && s.Password.Equals(f_password));
-                var data_ad = db.Admins.Where(s => s.Username == admin.Username && s.Password.Equals(f_password));
+                var data_ad = db.Administrators.Where(s => s.Username == administrator.Username && s.Password.Equals(f_password));
                 if (data_cus.Count() > 0)
                 {
                     //add session
@@ -59,15 +59,15 @@ namespace EdithTour.Controllers
                 else if (data_ad.Count() > 0)
                 {
                     //add session
-                    Session["Name"] = data_ad.FirstOrDefault().Name;
-                    Session["Email"] = data_ad.FirstOrDefault().Email;
+                    Session["NameAd"] = data_ad.FirstOrDefault().Name;
+                    Session["EmailAd"] = data_ad.FirstOrDefault().Email;
                     Session["ID_admin"] = data_ad.FirstOrDefault().ID_admin;
-                    Session["Phone"] = data_ad.FirstOrDefault().Phone;
-                    Session["Address"] = data_ad.FirstOrDefault().Address;
-                    Session["Birthday"] = data_ad.FirstOrDefault().Birthday;
-                    Session["Avatar"] = data_ad.FirstOrDefault().Avatar;
-                    Session["Password"] = f_password;
-                    Session["Username"] = data_ad.FirstOrDefault().Username;
+                    Session["PhoneAd"] = data_ad.FirstOrDefault().Phone;
+                    Session["AddressAd"] = data_ad.FirstOrDefault().Address;
+                    Session["BirthdayAd"] = data_ad.FirstOrDefault().Birthday;
+                    Session["AvatarAd"] = data_ad.FirstOrDefault().Avatar;
+                    Session["PasswordAd"] = f_password;
+                    Session["UsernameAd"] = data_ad.FirstOrDefault().Username;
                     //return View("~/Areas/Admin/Views/HomeAdmin/Index.cshtml");
                     return RedirectToAction("Index", "Home", new {area="Admin"});
                 }
@@ -98,34 +98,14 @@ namespace EdithTour.Controllers
             if (ModelState.IsValid)
             {
                 var check = db.Customers.FirstOrDefault(s => s.Username == customer.Username);
-                //var check_ad = db.Admins.FirstOrDefault(s => s.Username == customer.Username);
                 if (check == null)
                 {
                     customer.Password = GetMD5(customer.Password);
-                    //customer.Name = customer.Name;
-                    //customer.Email = customer.Email;
-                    //customer.Phone = customer.Phone;
-                    //customer.Address = customer.Address;
-                    //customer.Birthday = customer.Birthday;
-                    //customer.Username = customer.Username;
                     db.Customers.Add(customer);
                     db.SaveChanges();
                     return RedirectToAction("Login");
                     
                 }
-                //else if (check_ad == null)
-                //{
-                //    admin.Password = GetMD5(admin.Password);
-                //    admin.Name = admin.Name;
-                //    admin.Email = admin.Email;
-                //    admin.Phone = admin.Phone;
-                //    admin.Address = admin.Address;
-                //    admin.Birthday = admin.Birthday;
-                //    admin.Avatar = admin.Avatar;
-                //    db.Admins.Add(admin);
-                //    return View("~/Areas/Admin/Views/HomeAdmin/Index.cshtml");
-
-                //}
                 else
                 {
                     ViewBag.error = "Username already exists";
@@ -155,69 +135,6 @@ namespace EdithTour.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ActionResult Information(string Password, Customer customer)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var user = Session["Username"].ToString();
-        //        var fpass = Session["Password"].ToString();
-        //        var md5 = GetMD5(Password);
-        //        var data = db.Customers.FirstOrDefault(s => s.Username == user && md5 == fpass);
-        //        if (data == null)
-        //        {
-        //            Customer customeredit = db.Customers.Where(row => row.Username == user).FirstOrDefault();
-        //            customeredit.Password = md5;
-        //            db.SaveChanges();
-        //            Session.Clear();
-        //            return RedirectToAction("Index", "Home");
-        //        }
-        //        else
-        //        {
-        //            return RedirectToAction("Register", "Account");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return View("Login");
-        //    }
-        
-        //}
-
-
-        //[HttpPost]
-        //public ActionResult Edit(Customer customer, HttpPostedFileBase imageFile)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var user = Session["Username"].ToString();
-        //        var data = db.Customers.FirstOrDefault(s => s.Username == user);
-        //        if(data == null)
-        //        {
-        //            Customer customeredit = db.Customers.Where(row => row.Username == user).FirstOrDefault();
-        //            if (imageFile != null)
-        //            {
-        //                string filename = customer.Username + ".jpg";
-        //                string path = Path.Combine(Server.MapPath("~/Image"), filename);
-        //                imageFile.SaveAs(path);
-        //                customeredit.Avatar = filename;
-        //            }
-        //            customeredit.Name = customer.Name;
-        //            customeredit.Email = customer.Email;
-        //            customeredit.Address = customer.Address;
-        //            customeredit.Birthday = customer.Birthday;
-        //            customeredit.Phone = customer.Phone;
-        //            db.SaveChanges();
-        //            return View(customer);
-        //        }
-        //        else
-        //        {
-        //            return View("Information", "Account");
-        //        }
-        //    }
-        //    return View();
-        //}
-
         public ActionResult General()
         {
             var user = Session["Username"].ToString();
@@ -241,7 +158,7 @@ namespace EdithTour.Controllers
                     customeredit.Birthday = customer.Birthday;
                     customeredit.Phone = customer.Phone;
                     string filename = customeredit.Username + ".jpg";
-                    string path = Path.Combine(Server.MapPath("~/Images"), filename);
+                    string path = Path.Combine(Server.MapPath("~/Images/Users"), filename);
                     imageFiles.SaveAs(path);
                     customeredit.Avatar = filename;
                     db.SaveChanges();

@@ -1,9 +1,12 @@
 ﻿using EdithTour.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using EdithTour.Areas.Admin;
 
 namespace EdithTour.Areas.Admin.Controllers
 {
@@ -35,14 +38,28 @@ namespace EdithTour.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Customer customer, int ID_customer)
+        public ActionResult Edit(Customer customer, HttpPostedFileBase imageFiles)
         {
-            Customer customers = db.Customers.Where(row => row.ID_customer == ID_customer).FirstOrDefault();
-            if(customers != null)
+            Customer customeredit = db.Customers.Where(row => row.ID_customer == customer.ID_customer).FirstOrDefault();
+            if(customeredit != null)
             {
-
+                customeredit.Name =  customer.Name;
+                customeredit.Email = customer.Email;
+                customeredit.Phone = customer.Phone;
+                customeredit.Birthday = customer.Birthday;
+                customeredit.Address = customer.Address;
+                string filename = customeredit.Username + ".jpg";
+                string path = Path.Combine(Server.MapPath("~/Images/Users"), filename);
+                imageFiles.SaveAs(path);
+                customeredit.Avatar = filename;
+                db.SaveChanges();
+                return View("Users");
             }
-            return View();
+            else
+            {
+                return View("Edit");
+            }
+            
         }
 
         public ActionResult Delete(int id)
@@ -58,6 +75,31 @@ namespace EdithTour.Areas.Admin.Controllers
             db.Customers.Remove(cus);
             db.SaveChanges();
             return RedirectToAction("Users");
+        }
+
+        public ActionResult Information()
+        {
+            var myUser = Session["UsernameAd"].ToString();
+            var ad = db.Administrators.Where(row => row.Username == myUser).FirstOrDefault();
+            return View(ad);
+        }
+
+        [HttpPost]
+        public ActionResult Information(Administrator administrator, HttpPostedFileBase imageFiles)
+        {
+            var myUser = Session["UsernameAd"].ToString();
+            Administrator administratoredit = db.Administrators.Where(row => row.Username == myUser).FirstOrDefault();
+            administratoredit.Name = administrator.Name;
+            administratoredit.Email = administrator.Email;
+            administratoredit.Phone = administrator.Phone;
+            administratoredit.Birthday = administrator.Birthday;
+            administratoredit.Address = administrator.Address;
+            string filename = administratoredit.Username + ".jpg";
+            string path = Path.Combine(Server.MapPath("~/Images/Admin"), filename);
+            imageFiles.SaveAs(path);
+            administratoredit.Avatar = filename;
+            db.SaveChanges();
+            return View("Index");
         }
 
     }

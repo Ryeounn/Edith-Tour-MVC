@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminPage1.cshtml";
+}
+
+<div class="text">
+    <div class="list-add list-group account-settings-links">
+        <a href="" class="list-group-item list-group-item-action" id="inside" data-toggle="list">Tour Inside</a>
+        <a href="" class="list-group-item list-group-item-action" id="outside" data-toggle="list">Tour Outside</a>
+        <a href="" class="list-group-item list-group-item-action" id="trending" data-toggle="list">Tour Trending</a>
+        <a href="" class="list-group-item list-group-item-action" id="customer" data-toggle="list">Customer</a>
+        <a href="" class="list-group-item list-group-item-action" id="admin" data-toggle="list">Admin</a>
+        <a href="" class="list-group-item list-group-item-action" id="restaurant" data-toggle="list">Restaurant</a>
+        <a href="" class="list-group-item list-group-item-action" id="hotel" data-toggle="list">Hotel</a>
+    </div>
+</div>
+
+<div class="container">
+    <div id="loader">
+        
+    </div>
+</div>
+<script>
+    $('#inside').click(function () {
+        $("#loader").load('/Admin/Add/Inside');
+    });
+
+    $('#outside').click(function () {
+        $('#loader').load('/Admin/Add/Outside');
+    })
+
+    $('#trending').click(function () {
+        $('#loader').load('/Admin/Add/Trending');
+    })
+
+    $('#customer').click(function () {
+        $('#loader').load('/Admin/Add/Customer')
+    })
+
+    $('#admin').click(function () {
+        $('#loader').load('/Admin/Add/Admin');
+    })
+
+    $('#restaurant').click(function () {
+        $('#loader').load('/Admin/Add/Restaurant');
+    })
+
+    $('#hotel').click(function () {
+        $('#loader').load('/Admin/Add/Hotel');
+    })
+</script>

@@ -28,7 +28,7 @@ namespace EdithTour.Models
         public string Order_date { get; set; }
         public Nullable<int> ID_admin { get; set; }
     
-        public virtual Admin Admin { get; set; }
+        public virtual Administrator Administrator { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer_Level> Customer_Level { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

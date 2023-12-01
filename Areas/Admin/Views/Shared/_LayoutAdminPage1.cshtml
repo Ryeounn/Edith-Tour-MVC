@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="@Url.Content("~/Areas/Admin/Content/Admin.css")" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +29,15 @@
 
                 <span class="image">
                     @{
-                        string imageURL = "~\\Images\\" + @Session["Avatar"];
-                        <a href=""><img id="imager" onchange="chooseFile(this)" src="@Url.Content(imageURL)"></a>
+                        string imageURL = "~\\Images\\Admin\\" + Session["AvatarAd"];
+                        <a href="@Url.Action("Information", "Home")"><img id="imager" onchange="chooseFile(this)" src="@Url.Content(imageURL)"></a>
                     }
 
                 </span>
 
                     <div class="text header-text">
-                        <span class="name">@Session["Name"]</span>
-                        <span class="profession">@Session["Username"]</span>
+                        <span class="name">@Session["NameAd"]</span>
+                        <span class="profession">@Session["UsernameAd"]</span>
                     </div>
                 @*<?php
         }
@@ -65,7 +65,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="@Url.Action("Add", "Product")">
+                        <a href="@Url.Action("Add", "Add")">
                             <i class="fas fa-plus icon"></i>
                             <span class="text nav-text">Add</span>
                         </a>

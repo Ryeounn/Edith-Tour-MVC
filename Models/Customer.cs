@@ -17,7 +17,7 @@ namespace EdithTour.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
-            this.Admins = new HashSet<Admin>();
+            this.Administrators = new HashSet<Administrator>();
             this.Customer_Level = new HashSet<Customer_Level>();
         }
     
@@ -33,7 +33,7 @@ namespace EdithTour.Models
         public Nullable<int> ID_service { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Admin> Admins { get; set; }
+        public virtual ICollection<Administrator> Administrators { get; set; }
         public virtual Service Service { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer_Level> Customer_Level { get; set; }

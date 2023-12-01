@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EdithTourModelStoreContainer" CdmEntityContainer="EdithTourEntities">
-    <EntitySetMapping Name="Admins">
-      <EntityTypeMapping TypeName="EdithTourModel.Admin">
-        <MappingFragment StoreEntitySet="Admin">
+    <EntitySetMapping Name="Administrators">
+      <EntityTypeMapping TypeName="EdithTourModel.Administrator">
+        <MappingFragment StoreEntitySet="Administrators">
           <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Avatar" ColumnName="Avatar" />
@@ -175,6 +175,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="EdithTourModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
+          <ScalarProperty Name="Place_go" ColumnName="Place_go" />
+          <ScalarProperty Name="Place_leave" ColumnName="Place_leave" />
+          <ScalarProperty Name="Time_go" ColumnName="Time_go" />
+          <ScalarProperty Name="Time_leave" ColumnName="Time_leave" />
+          <ScalarProperty Name="Day_go" ColumnName="Day_go" />
+          <ScalarProperty Name="Day_leave" ColumnName="Day_leave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Services">
       <EntityTypeMapping TypeName="EdithTourModel.Service">
         <MappingFragment StoreEntitySet="Service">
@@ -250,6 +263,7 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
           <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -277,6 +291,7 @@
           <ScalarProperty Name="Price" ColumnName="Price" />
           <ScalarProperty Name="Note" ColumnName="Note" />
           <ScalarProperty Name="ID_tour" ColumnName="ID_tour" />
+          <ScalarProperty Name="ID_schedule" ColumnName="ID_schedule" />
           <ScalarProperty Name="ID_ticket" ColumnName="ID_ticket" />
         </MappingFragment>
       </EntityTypeMapping>

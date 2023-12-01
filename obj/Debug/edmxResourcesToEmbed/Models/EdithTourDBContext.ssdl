@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EdithTourModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Admin">
+  <EntityType Name="Administrators">
     <Key>
       <PropertyRef Name="ID_admin" />
     </Key>
@@ -161,6 +161,18 @@
     <Property Name="Note" Type="varchar" MaxLength="1255" />
     <Property Name="ID_hotel" Type="int" />
   </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ID_schedule" />
+    </Key>
+    <Property Name="ID_schedule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Place_go" Type="varchar" MaxLength="100" />
+    <Property Name="Place_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Time_go" Type="varchar" MaxLength="100" />
+    <Property Name="Time_leave" Type="varchar" MaxLength="100" />
+    <Property Name="Day_go" Type="varchar" MaxLength="100" />
+    <Property Name="Day_leave" Type="varchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="Service">
     <Key>
       <PropertyRef Name="ID_service" />
@@ -233,6 +245,7 @@
     <Property Name="Price" Type="money" />
     <Property Name="Note" Type="varchar" MaxLength="1500" />
     <Property Name="ID_tour" Type="int" />
+    <Property Name="ID_schedule" Type="int" />
     <Property Name="ID_ticket" Type="int" />
   </EntityType>
   <EntityType Name="Tour_Outside">
@@ -259,6 +272,7 @@
     <Property Name="Price" Type="money" />
     <Property Name="Note" Type="varchar" MaxLength="1500" />
     <Property Name="ID_tour" Type="int" />
+    <Property Name="ID_schedule" Type="int" />
     <Property Name="ID_ticket" Type="int" />
   </EntityType>
   <EntityType Name="Tourtrending">
@@ -297,12 +311,12 @@
   </Association>
   <Association Name="fk_cus_id_ad">
     <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
-    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <End Role="Administrators" Type="Self.Administrators" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Customer">
         <PropertyRef Name="ID_customer" />
       </Principal>
-      <Dependent Role="Admin">
+      <Dependent Role="Administrators">
         <PropertyRef Name="ID_customer" />
       </Dependent>
     </ReferentialConstraint>
@@ -464,10 +478,10 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_order_id_ad">
-    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Administrators" Type="Self.Administrators" Multiplicity="0..1" />
     <End Role="Order" Type="Self.Order" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Admin">
+      <Principal Role="Administrators">
         <PropertyRef Name="ID_admin" />
       </Principal>
       <Dependent Role="Order">
@@ -499,11 +513,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="fk_schedule_id_in">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+    <End Role="Tour_Inside" Type="Self.Tour_Inside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID_schedule" />
+      </Principal>
+      <Dependent Role="Tour_Inside">
+        <PropertyRef Name="ID_schedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_schedule_id_out">
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="0..1" />
+    <End Role="Tour_Outside" Type="Self.Tour_Outside" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ID_schedule" />
+      </Principal>
+      <Dependent Role="Tour_Outside">
+        <PropertyRef Name="ID_schedule" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_ser_id_ad">
-    <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+    <End Role="Administrators" Type="Self.Administrators" Multiplicity="0..1" />
     <End Role="Service" Type="Self.Service" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Admin">
+      <Principal Role="Administrators">
         <PropertyRef Name="ID_admin" />
       </Principal>
       <Dependent Role="Service">
@@ -596,7 +634,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="EdithTourModelStoreContainer">
-    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Administrators" EntityType="Self.Administrators" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Airline" EntityType="Self.Airline" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Combo" EntityType="Self.Combo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
@@ -609,6 +647,7 @@
     <EntitySet Name="Orderdetails" EntityType="Self.Orderdetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ticket_Combo" EntityType="Self.Ticket_Combo" Schema="dbo" store:Type="Tables" />
@@ -626,7 +665,7 @@
     </AssociationSet>
     <AssociationSet Name="fk_cus_id_ad" Association="Self.fk_cus_id_ad">
       <End Role="Customer" EntitySet="Customer" />
-      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Administrators" EntitySet="Administrators" />
     </AssociationSet>
     <AssociationSet Name="fk_cus_id_ser" Association="Self.fk_cus_id_ser">
       <End Role="Service" EntitySet="Service" />
@@ -681,7 +720,7 @@
       <End Role="Combo" EntitySet="Combo" />
     </AssociationSet>
     <AssociationSet Name="fk_order_id_ad" Association="Self.fk_order_id_ad">
-      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Administrators" EntitySet="Administrators" />
       <End Role="Order" EntitySet="Order" />
     </AssociationSet>
     <AssociationSet Name="fk_out_id_ticket" Association="Self.fk_out_id_ticket">
@@ -692,8 +731,16 @@
       <End Role="Service" EntitySet="Service" />
       <End Role="Restaurant" EntitySet="Restaurant" />
     </AssociationSet>
+    <AssociationSet Name="fk_schedule_id_in" Association="Self.fk_schedule_id_in">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Tour_Inside" EntitySet="Tour_Inside" />
+    </AssociationSet>
+    <AssociationSet Name="fk_schedule_id_out" Association="Self.fk_schedule_id_out">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Tour_Outside" EntitySet="Tour_Outside" />
+    </AssociationSet>
     <AssociationSet Name="fk_ser_id_ad" Association="Self.fk_ser_id_ad">
-      <End Role="Admin" EntitySet="Admin" />
+      <End Role="Administrators" EntitySet="Administrators" />
       <End Role="Service" EntitySet="Service" />
     </AssociationSet>
     <AssociationSet Name="fk_tk_id_tour_combo" Association="Self.fk_tk_id_tour_combo">

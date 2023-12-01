@@ -100,7 +100,7 @@ body {
             align-items: center;
             justify-content: center;
             min-width: 60px;
-            font-size: 20px;
+            font-size: 16px;
         }
 
         .sidebar li .fix-icon {
@@ -396,4 +396,25 @@ th,td{
 
 .note-avt {
     margin: 1em 0 0 50%;
+}
+
+.btn-user-edit{
+    width: 20%;
+    margin-left: 15%;
+}
+
+.form-group label{
+    color: var(--text-color);
+}
+
+.btn-inside-create{
+    margin-left: 40%;
+}
+
+.btn-trending-create,
+.btn-customer-create,
+.btn-restaurant-create,
+.btn-hotel-create{
+    width: 20%;
+    margin-left: 40%;
 }

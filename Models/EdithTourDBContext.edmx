@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="EdithTourModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Admin">
+        <EntityType Name="Administrators">
           <Key>
             <PropertyRef Name="ID_admin" />
           </Key>
@@ -316,12 +316,12 @@
         </Association>
         <Association Name="fk_cus_id_ad">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
-          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <End Role="Administrators" Type="Self.Administrators" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="ID_customer" />
             </Principal>
-            <Dependent Role="Admin">
+            <Dependent Role="Administrators">
               <PropertyRef Name="ID_customer" />
             </Dependent>
           </ReferentialConstraint>
@@ -483,10 +483,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_order_id_ad">
-          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Administrators" Type="Self.Administrators" Multiplicity="0..1" />
           <End Role="Order" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Admin">
+            <Principal Role="Administrators">
               <PropertyRef Name="ID_admin" />
             </Principal>
             <Dependent Role="Order">
@@ -543,10 +543,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_ser_id_ad">
-          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Administrators" Type="Self.Administrators" Multiplicity="0..1" />
           <End Role="Service" Type="Self.Service" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Admin">
+            <Principal Role="Administrators">
               <PropertyRef Name="ID_admin" />
             </Principal>
             <Dependent Role="Service">
@@ -639,7 +639,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="EdithTourModelStoreContainer">
-          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Administrators" EntityType="Self.Administrators" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Airline" EntityType="Self.Airline" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Combo" EntityType="Self.Combo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
@@ -670,7 +670,7 @@
           </AssociationSet>
           <AssociationSet Name="fk_cus_id_ad" Association="Self.fk_cus_id_ad">
             <End Role="Customer" EntitySet="Customer" />
-            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Administrators" EntitySet="Administrators" />
           </AssociationSet>
           <AssociationSet Name="fk_cus_id_ser" Association="Self.fk_cus_id_ser">
             <End Role="Service" EntitySet="Service" />
@@ -725,7 +725,7 @@
             <End Role="Combo" EntitySet="Combo" />
           </AssociationSet>
           <AssociationSet Name="fk_order_id_ad" Association="Self.fk_order_id_ad">
-            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Administrators" EntitySet="Administrators" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
           <AssociationSet Name="fk_out_id_ticket" Association="Self.fk_out_id_ticket">
@@ -745,7 +745,7 @@
             <End Role="Tour_Outside" EntitySet="Tour_Outside" />
           </AssociationSet>
           <AssociationSet Name="fk_ser_id_ad" Association="Self.fk_ser_id_ad">
-            <End Role="Admin" EntitySet="Admin" />
+            <End Role="Administrators" EntitySet="Administrators" />
             <End Role="Service" EntitySet="Service" />
           </AssociationSet>
           <AssociationSet Name="fk_tk_id_tour_combo" Association="Self.fk_tk_id_tour_combo">
@@ -782,7 +782,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EdithTourModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Admin">
+        <EntityType Name="Administrator">
           <Key>
             <PropertyRef Name="ID_admin" />
           </Key>
@@ -796,9 +796,9 @@
           <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_customer" Type="Int32" />
-          <NavigationProperty Name="Customer" Relationship="Self.fk_cus_id_ad" FromRole="Admin" ToRole="Customer" />
-          <NavigationProperty Name="Orders" Relationship="Self.fk_order_id_ad" FromRole="Admin" ToRole="Order" />
-          <NavigationProperty Name="Services" Relationship="Self.fk_ser_id_ad" FromRole="Admin" ToRole="Service" />
+          <NavigationProperty Name="Customer" Relationship="Self.fk_cus_id_ad" FromRole="Administrators" ToRole="Customer" />
+          <NavigationProperty Name="Orders" Relationship="Self.fk_order_id_ad" FromRole="Administrators" ToRole="Order" />
+          <NavigationProperty Name="Services" Relationship="Self.fk_ser_id_ad" FromRole="Administrators" ToRole="Service" />
         </EntityType>
         <EntityType Name="Airline">
           <Key>
@@ -865,7 +865,7 @@
           <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="ID_service" Type="Int32" />
-          <NavigationProperty Name="Admins" Relationship="Self.fk_cus_id_ad" FromRole="Customer" ToRole="Admin" />
+          <NavigationProperty Name="Administrators" Relationship="Self.fk_cus_id_ad" FromRole="Customer" ToRole="Administrators" />
           <NavigationProperty Name="Service" Relationship="Self.fk_cus_id_ser" FromRole="Customer" ToRole="Service" />
           <NavigationProperty Name="Customer_Level" Relationship="Self.fk_cuslevel_id_cus" FromRole="Customer" ToRole="Customer_Level" />
         </EntityType>
@@ -923,7 +923,7 @@
           <Property Name="service_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Order_date" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_admin" Type="Int32" />
-          <NavigationProperty Name="Admin" Relationship="Self.fk_order_id_ad" FromRole="Order" ToRole="Admin" />
+          <NavigationProperty Name="Administrator" Relationship="Self.fk_order_id_ad" FromRole="Order" ToRole="Administrators" />
           <NavigationProperty Name="Customer_Level" Relationship="Self.fk_cuslevel_id_order" FromRole="Order" ToRole="Customer_Level" />
           <NavigationProperty Name="Data_market" Relationship="Self.fk_data_id_order" FromRole="Order" ToRole="Data_market" />
           <NavigationProperty Name="Orderdetails" Relationship="Self.fk_detail_id_order" FromRole="Order" ToRole="Orderdetails" />
@@ -994,7 +994,7 @@
           <Property Name="ID_service" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="ID_admin" Type="Int32" />
-          <NavigationProperty Name="Admin" Relationship="Self.fk_ser_id_ad" FromRole="Service" ToRole="Admin" />
+          <NavigationProperty Name="Administrator" Relationship="Self.fk_ser_id_ad" FromRole="Service" ToRole="Administrators" />
           <NavigationProperty Name="Airlines" Relationship="Self.fk_air_id_ser" FromRole="Service" ToRole="Airline" />
           <NavigationProperty Name="Comboes" Relationship="Self.fk__id_list_ser" FromRole="Service" ToRole="Combo" />
           <NavigationProperty Name="Customers" Relationship="Self.fk_cus_id_ser" FromRole="Service" ToRole="Customer" />
@@ -1127,21 +1127,21 @@
         </EntityType>
         <Association Name="fk_cus_id_ad">
           <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
-          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <End Role="Administrators" Type="Self.Administrator" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Customer">
               <PropertyRef Name="ID_customer" />
             </Principal>
-            <Dependent Role="Admin">
+            <Dependent Role="Administrators">
               <PropertyRef Name="ID_customer" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_order_id_ad">
-          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Administrators" Type="Self.Administrator" Multiplicity="0..1" />
           <End Role="Order" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Admin">
+            <Principal Role="Administrators">
               <PropertyRef Name="ID_admin" />
             </Principal>
             <Dependent Role="Order">
@@ -1150,10 +1150,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_ser_id_ad">
-          <End Role="Admin" Type="Self.Admin" Multiplicity="0..1" />
+          <End Role="Administrators" Type="Self.Administrator" Multiplicity="0..1" />
           <End Role="Service" Type="Self.Service" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Admin">
+            <Principal Role="Administrators">
               <PropertyRef Name="ID_admin" />
             </Principal>
             <Dependent Role="Service">
@@ -1474,7 +1474,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="EdithTourEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Administrators" EntityType="Self.Administrator" />
           <EntitySet Name="Airlines" EntityType="Self.Airline" />
           <EntitySet Name="Comboes" EntityType="Self.Combo" />
           <EntitySet Name="Contacts" EntityType="Self.Contact" />
@@ -1497,14 +1497,14 @@
           <EntitySet Name="Tourtrendings" EntityType="Self.Tourtrending" />
           <AssociationSet Name="fk_cus_id_ad" Association="Self.fk_cus_id_ad">
             <End Role="Customer" EntitySet="Customers" />
-            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Administrators" EntitySet="Administrators" />
           </AssociationSet>
           <AssociationSet Name="fk_order_id_ad" Association="Self.fk_order_id_ad">
-            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Administrators" EntitySet="Administrators" />
             <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
           <AssociationSet Name="fk_ser_id_ad" Association="Self.fk_ser_id_ad">
-            <End Role="Admin" EntitySet="Admins" />
+            <End Role="Administrators" EntitySet="Administrators" />
             <End Role="Service" EntitySet="Services" />
           </AssociationSet>
           <AssociationSet Name="fk_air_id_ser" Association="Self.fk_air_id_ser">
@@ -1618,9 +1618,9 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EdithTourModelStoreContainer" CdmEntityContainer="EdithTourEntities">
-          <EntitySetMapping Name="Admins">
-            <EntityTypeMapping TypeName="EdithTourModel.Admin">
-              <MappingFragment StoreEntitySet="Admin">
+          <EntitySetMapping Name="Administrators">
+            <EntityTypeMapping TypeName="EdithTourModel.Administrator">
+              <MappingFragment StoreEntitySet="Administrators">
                 <ScalarProperty Name="ID_admin" ColumnName="ID_admin" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Avatar" ColumnName="Avatar" />
